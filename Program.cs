@@ -19,8 +19,9 @@ namespace DSRemapper.ServerApp
             AppDomain.CurrentDomain.DomainUnload += ProcessExit;
             MainServer.OnProcessRequest = MainServer_RequestHandler;
 
+            MainServer.MapGetToFile("/", "./wwwroot/mainMenu.html");
 
-            logger.LogInformation("Configuring server");
+            logger.LogInformation("Starting server");
             MainServer.Start();
             
             while(run);

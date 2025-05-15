@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSRemapper</title>
+    <base href="/" />
+</head>
+
+<body>
+    <div id="subapp" class="hide-side-panel" @ref=appDiv>
+        <NavBar>
+            <button>Plugins Menu</button>
+            <button>Windows Controllers</button>
+            <button class="to-right">Debug Console</button>
+            <button>About</button>
+        </NavBar>
+        <div id="side-panel">
+            <button>Plugin Manager</button>
+            <button>Plugin 1</button>
+            <button>Plugin 2</button>
+            <button>Plugin 3</button>
+            <button>Plugin 4</button>
+        </div>
+        <div id="main-view">
+            <div id="controllers-view">
+
+            </div>
+        </div>
+        <footer id="footer" class="debug-console" @ref=footer>
+        </footer>
+    </div>
+</body>
+</html>
