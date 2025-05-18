@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FireLibs.Web" Version="1.0.1" />
+    <PackageReference Include="FireLibs.Web" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="wwwroot\mainMenu.html">
+    <None Update="wwwroot\**/*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

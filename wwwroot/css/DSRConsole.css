@@ -1,0 +1,51 @@
+.debug-console{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.debug-console>*{
+    font-family: monospace;
+    white-space: break-spaces;
+    overflow-wrap: break-word;
+    padding: 3px 5px;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+    border-radius: 5px;
+}
+
+
+/*Custom Log Tags*/
+trace {
+    color:rgb(82, 150, 255);
+    border-color: rgba(0, 100, 200, 0.5) !important;
+    background-color: rgba(0, 100, 200, 0.2) !important;
+}
+debug {
+    color:rgb(0, 210, 0);
+    border-color: rgba(0, 140, 255, 0.5) !important;
+    background-color: rgba(0, 140, 255, 0.2) !important;
+}
+information {
+    color: #ccc;
+}
+
+warning {
+    color: #fc0;
+    border-color: rgba(255, 187, 0, 0.5) !important;
+    background-color: rgba(255, 187, 0, 0.15) !important;
+}
+
+error {
+    color: #f22;
+    border-color: rgba(221, 0, 0, 0.5) !important;
+    background-color: rgba(221, 0, 0, 0.15) !important;
+}
+critical{
+    color: #ddd;
+    border-color: rgba(221, 0, 0, 0.5) !important;
+    background-color: rgba(221, 0, 0, 0.5) !important;
+}
+none{
+    color:rgb(135, 190, 255);
+}

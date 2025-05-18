@@ -1,0 +1,39 @@
+.plugin-item {
+    display:grid;
+    grid-template-columns: min-content 1fr 150px;
+    grid-template-rows: 40px 1fr 40px 30px;
+    background-color: #444;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+    padding:5px;
+}
+
+.plugin-item .plugin-title {
+    grid-column-start: span 3;
+    font-size: 20px;
+}
+
+.plugin-item .plugin-description {
+    align-self: flex-start;
+    grid-column-start: span 3;
+}
+.plugin-item .plugin-ins-version-label{
+
+}
+.plugin-item .plugin-version {
+    padding: 3px;
+    width: 100%;
+    background-color: #3e3e3e;
+    color: #ddd;
+    border-color: #555;
+    border-radius: 5px;
+}
+
+.plugin-item .plugin-install {
+
+}
+
+.plugin-item .plugin-cur-version-label{
+    grid-column-start: span 3;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSRemapper</title>
+    <base href="/" />
+    <script src="js/jsinterop.js"></script>
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="WinFormsBlazor.styles.css" rel="stylesheet" />
+    <link href="css/DSRInterface.css" rel="stylesheet" />
+    <link href="css/DSRControllers.css" rel="stylesheet" />
+    <link href="css/DSRPlugins.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div id="app">
+        <div id="subapp">
+        <nav id="nav-bar">NavBar</nav>
+        <div id="main-view" class="column-span2">
+            <div class="plugin-item">
+                <div class="plugin-title">Plugin Name</div>
+                <div class="plugin-description">
+                    This is a plugin. This is a plugin. This is a plugin. This is a plugin. This is a plugin. This is a plugin.
+                    This is a plugin. This is a plugin. This is a plugin. This is a plugin. This is a plugin. This is a plugin.
+                    This is a plugin. This is a plugin. This is a plugin. This is a plugin. This is a plugin. This is a plugin.
+                    This is a plugin. This is a plugin. This is a plugin. This is a plugin. This is a plugin. This is a plugin.
+                    This is a plugin. This is a plugin. This is a plugin. This is a plugin. This is a plugin. This is a plugin.
+                </div>
+                <div class="plugin-ins-version-label">Version:</div>
+                <select class="plugin-version">
+                    <option value="">Select a version</option>
+                    <option>0.1.0</option>
+                    <option>0.1.1</option>
+                    <option>0.2.0</option>
+                </select>
+                <button class="plugin-install">Install</button>
+                <div class="plugin-cur-version-label">Current version: ----</div>
+            </div>
+        </div>
+        <footer id="footer">Footer</footer>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.webview.js"></script>
+</body>
+
+</html>

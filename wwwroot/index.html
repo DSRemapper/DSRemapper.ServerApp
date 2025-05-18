@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSRemapper</title>
+    <base href="/" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/DSRInterface.css" rel="stylesheet" />
+    <link href="css/DSRControllers.css" rel="stylesheet" />
+    <link href="css/DSRPlugins.css" rel="stylesheet" />
+    <link href="css/DSRAbout.css" rel="stylesheet" />
+    <link href="css/DSRConsole.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav id="nav-bar">
+        <button>Plugins Menu</button>
+        <button>Windows Controllers</button>
+        <button class="to-right">Debug Console</button>
+        <button>About</button>
+    </nav>
+    <div id="side-panel">
+        <button>Plugin Manager</button>
+        <button>Plugin 1</button>
+        <button>Plugin 2</button>
+        <button>Plugin 3</button>
+        <button>Plugin 4</button>
+    </div>
+    <div id="main-view">
+        <div class="ctrl-item">
+            <div class="ctrl-img">
+                <img src="Images/UnknownController.png" onerror="this.onerror=null;this.src='Images/UnknownController.png';">
+            </div>
+            <div class="ctrl-main">
+                <div class="ctrl-title">Controller Name</div>
+                <div class="ctrl-info monospace">Bluetooth - Battery: 50% Charging...</div>
+                <select class="ctrl-profile-list">
+                    <option value="">Select a profile</option>
+                    <option>Profile 1</option>
+                    <option>Profile 2</option>
+                    <option>Profile 3</option>
+                </select>
+                <div class="ctrl-console monospace">this is a test
+<warning>this is a test</warning>
+<error>this is a test</error>
+                </div>
+            </div>
+            <div class="ctrl-actions">
+                <button>Action 1</button>
+                <button>Action 1</button>
+                <button>Action 1</button>
+                <button>Action 1</button>
+            </div>
+            <div class="ctrl-bbar">
+                <input type="checkbox"><label>Auto connect</label>
+                <button>Disconnect BT</button>
+                <button>Function A</button>
+                <button>Function A</button>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="debug-console"><information>Footer</information></footer>
+</body>
+
+</html>

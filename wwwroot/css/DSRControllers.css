@@ -1,0 +1,110 @@
+.ctrl-item {
+    background-color: #444;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 1fr 40px;
+    padding: 5px;
+    gap: 5px;
+    width: 100%;
+    /*min-height: 200px;
+    max-height: 300px;*/
+}
+
+.ctrl-bbar{
+    display: flex;
+    flex-direction: row;
+    grid-column-start: span 3;
+    border-bottom: #333 solid 1px;
+    margin: 0px -5px;
+    padding: 5px;
+    gap: 5px;
+    overflow: auto hidden;
+    align-items: center;
+    transform: rotateX(180deg);
+}
+.ctrl-bbar>*{
+    display: flex;
+    align-items: center;
+    min-height: 0;
+    min-width: fit-content;
+    font-size: 14px;
+    transform: rotateX(180deg);
+    height: 100%;
+}
+
+.ctrl-item .ctrl-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+}
+.ctrl-item .ctrl-img>img {
+    width: 100%;
+    margin: auto;
+}
+.ctrl-item .ctrl-main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: min-content min-content min-content;
+    align-items: center;
+    gap: 5px;
+}
+
+.ctrl-item .ctrl-title {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.ctrl-item .ctrl-info {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+}
+
+.ctrl-item .ctrl-profile-list {
+    padding: 3px;
+    width: 100%;
+    background-color: #3e3e3e;
+    color: #ddd;
+    border-color: #555;
+    border-radius: 5px;
+}
+
+.ctrl-item .ctrl-console {
+    background-color: #333;
+    white-space: pre;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    overflow: auto;
+    min-height: 100px;
+    max-height: 200px;
+}
+
+.ctrl-item .ctrl-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ctrl-item .ctrl-actions>*{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+.ctrl-item .ctrl-console warning {
+    color: #fc0;
+    border-color: #0000 !important;
+    background-color: #0000 !important;
+}
+
+.ctrl-item .ctrl-console error {
+    color: #f22;
+    border-color: #0000 !important;
+    background-color: #0000 !important;
+}
