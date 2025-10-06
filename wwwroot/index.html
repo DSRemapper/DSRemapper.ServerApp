@@ -6,62 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DSRemapper</title>
     <base href="/" />
-    <link href="css/app.css" rel="stylesheet" />
     <link href="css/DSRInterface.css" rel="stylesheet" />
     <link href="css/DSRControllers.css" rel="stylesheet" />
     <link href="css/DSRPlugins.css" rel="stylesheet" />
     <link href="css/DSRAbout.css" rel="stylesheet" />
     <link href="css/DSRConsole.css" rel="stylesheet" />
+    <script src="js/signalr.min.js"></script>
+    <script src="js/DSRInterface.js"></script>
 </head>
 
-<body>
-    <nav id="nav-bar">
-        <button>Plugins Menu</button>
-        <button>Windows Controllers</button>
-        <button class="to-right">Debug Console</button>
-        <button>About</button>
-    </nav>
-    <div id="side-panel">
-        <button>Plugin Manager</button>
-        <button>Plugin 1</button>
-        <button>Plugin 2</button>
-        <button>Plugin 3</button>
-        <button>Plugin 4</button>
-    </div>
-    <div id="main-view">
+<body id="app" class="hide-side-panel">
+        <nav id="nav-bar">
+            <button onclick="hidePluginsPanel()">Plugins Menu</button>
+            <button onclick="openWindowsDevices()">Windows Controllers</button>
+            <button class="to-right">Debug Console</button>
+            <button>About</button>
+        </nav>
+        <div id="side-panel">
+            <button>Plugin Manager</button>
+            <button>Plugin 1</button>
+            <button>Plugin 2</button>
+            <button>Plugin 3</button>
+            <button>Plugin 4</button>
+        </div>
+        <div id="main-view"></div>
+        <footer id="footer" class="debug-console">
+            <information>Footer</information>
+        </footer>
+
+    <template id="controller-template">
         <div class="ctrl-item">
             <div class="ctrl-img">
-                <img src="Images/UnknownController.png" onerror="this.onerror=null;this.src='Images/UnknownController.png';">
+                <img src="Images/UnknownController.png"
+                    onerror="this.onerror=null;this.src='Images/UnknownController.png';">
             </div>
             <div class="ctrl-main">
                 <div class="ctrl-title">Controller Name</div>
-                <div class="ctrl-info monospace">Bluetooth - Battery: 50% Charging...</div>
-                <select class="ctrl-profile-list">
-                    <option value="">Select a profile</option>
-                    <option>Profile 1</option>
-                    <option>Profile 2</option>
-                    <option>Profile 3</option>
-                </select>
-                <div class="ctrl-console monospace">this is a test
-<warning>this is a test</warning>
-<error>this is a test</error>
-                </div>
+                <div class="ctrl-info monospace">Device Status</div>
+                <select class="ctrl-profile-list profile-selector"></select>
+                <div class="ctrl-console monospace"></div>
             </div>
             <div class="ctrl-actions">
-                <button>Action 1</button>
-                <button>Action 1</button>
-                <button>Action 1</button>
-                <button>Action 1</button>
+                <button data-action="connect">Connect</button>
+                <button data-action="disconnect">Disconnect</button>
+                <button data-action="reload-profile">Reload Profile</button>
+                <button data-action="input-test">Input Test</button>
             </div>
             <div class="ctrl-bbar">
-                <input type="checkbox"><label>Auto connect</label>
-                <button>Disconnect BT</button>
-                <button>Function A</button>
-                <button>Function A</button>
+                <label><input type="checkbox">Auto connect</label>
             </div>
         </div>
-    </div>
-    <footer id="footer" class="debug-console"><information>Footer</information></footer>
+    </template>
 </body>
 
 </html>

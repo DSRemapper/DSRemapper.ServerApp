@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,13 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FireLibs.Web" Version="1.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="wwwroot\**/*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </None>  
+    <ProjectReference Include="..\DSRemapper.Core\DSRemapper.Core.csproj" />
+    <ProjectReference Include="..\DSRemapper.Framework\DSRemapper.Framework.csproj" />
   </ItemGroup>
 
 </Project>

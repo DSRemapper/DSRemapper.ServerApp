@@ -1,80 +1,95 @@
-﻿using System.Net.Mime;
-using System.Text.Json;
-using FireLibs.Web.Http;
+﻿using DSRemapper.Framework;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using DSRemapper.Core;
+using DSRemapper.ServerApp.Hubs;
+using DSRemapper.Core.Loggers;
+using Microsoft.AspNetCore.SignalR;
+using DSRemapper.ServerApp.Controllers;
 
 namespace DSRemapper.ServerApp
 {
     internal class Program
     {
-        static ILoggerFactory logFac = LoggerFactory.Create((builder) =>
-            builder.SetMinimumLevel(LogLevel.Debug).AddProvider(new EventLoggerProvider()));
-
-        static ILogger logger = logFac.CreateLogger("MainProgram");
-
-        static HttpServer MainServer = new(5100, 60000, logFac.CreateLogger<HttpServer>());
-        static bool run = true;
-
-        static readonly string wwwrootPath = Path.GetFullPath("./wwwroot");
-
-        static Dictionary<string, string> Devices = new()
-        {
-            {"id1", "test1" },
-            {"id2", "test2" },
-            {"id3", "test3" },
-            {"id4", "test4" },
-        };
-
         static void Main(string[] args)
         {
-            logger.LogInformation("Configuring server");
-            AppDomain.CurrentDomain.DomainUnload += ProcessExit;
-            MainServer.OnProcessRequest = MainServer_RequestHandler;
+            IHubContext<DSRHub>? dsrHubContext = null;
 
-            MainServer.MapGet("/devices",(req, opts)=>
+            //ILoggerFactory logFac = LoggerFactory.Create(builder => builder.AddProvider(new ConsoleLoggerProvider()));
+
+            WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+            builder.Logging.ClearProviders();
+            builder.Logging.AddProvider(new ConsoleLoggerProvider());
+            builder.Logging.SetMinimumLevel(LogLevel.Information);
+            builder.Services.AddControllers();
+            builder.Services.AddSignalR();
+            
+            builder.Services.Configure<HostOptions>(options =>
             {
-                if (opts.Length == 0)
-                    return new(HttpDefaultStatus.OK, [],
-                        JsonSerializer.Serialize(Devices.Keys),
-                        MediaTypeNames.Application.Json);
-                if(Devices.TryGetValue(opts[0], out var dev))
-                    return new(HttpDefaultStatus.OK, [],
-                        JsonSerializer.Serialize(dev),
-                        MediaTypeNames.Application.Json);
-
-                return HttpResponse.NotFoundResponse;
+                options.ShutdownTimeout = TimeSpan.FromSeconds(1);
             });
 
-            logger.LogInformation("Starting server");
-            MainServer.Start();
+            WebApplication app = builder.Build();
+            ILogger<Program> logger = app.Services.GetRequiredService<ILogger<Program>>();//logFac.CreateLogger<Program>();
 
-            while (run) ;
-        }
+            logger.LogInformation("Loading DSRemapper Framework...");
+            AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
+            {
+                Exception? exception = (Exception?)e.ExceptionObject;
+                logger.LogCritical($"{sender?.GetType().FullName}: {exception?.Message}");
+            };
 
-        private static void ProcessExit(object? sender, EventArgs e)
-        {
-            MainServer.Stop();
-        }
+            PluginLoader.LoadPluginAssemblies();
+            PluginLoader.LoadPlugins();
+            logger.LogInformation("DSRemapper Framework loaded.");
 
-        static HttpResponse MainServer_RequestHandler(HttpRequest request){
-            HttpResponse response = new(HttpDefaultStatus.OK,[],"");
+
+            IHostApplicationLifetime lifetime = app.Services.GetRequiredService<IHostApplicationLifetime>();
+            lifetime.ApplicationStopping.Register(() =>
+            {
+                logger.LogInformation("Stopping DSRemapper Framework...");
+                RemapperCore.Stop();
+                logger.LogInformation("DSRemapper Framework stopped.");
+            });
+
+            logger.LogInformation("Configuring server endpoints");
+
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+            /*app.UseStaticFiles(new StaticFileOptions
+            {
+                OnPrepareResponse = ctx =>
+                {
+                    ctx.Context.Response.Headers.Append("Cache-Control", "no-cache, no-store, must-revalidate");
+                    ctx.Context.Response.Headers.Append("Pragma", "no-cache");
+                    ctx.Context.Response.Headers.Append("Expires", "0");
+                }
+            });*/
+            app.MapControllers();
+            app.MapHub<DSRHub>("/dsrHub");
+
+            app.MapGet("/api/exit", () => lifetime.StopApplication());
+
+            logger.LogInformation("Starting server on http://localhost:5100");
+
+
+            dsrHubContext = app.Services.GetRequiredService<IHubContext<DSRHub>>();
             
-            if(request.Path == "/exit.exit")
-                run = false;
-            else if(request.IsOperation("GET")){
-                string fullPath = Path.GetFullPath(Path.Combine(wwwrootPath, request.Path[1..]));
-                //Console.WriteLine($"{wwwrootPath} | {fullPath}");
-                if (!fullPath.StartsWith(wwwrootPath))
-                    return new(HttpDefaultStatus.Forbidden, [], "");
+            RemapperCore.OnUpdate += async () =>
+            {
+                if (dsrHubContext != null)
+                {
+                    logger.LogInformation("Device list updated, notifying clients.");
 
-                if (!File.Exists(fullPath))
-                    return new(HttpDefaultStatus.NotFound, [], "");
+                    await dsrHubContext.Clients.All.SendAsync("DevicesUpdated", DevicesController.GetRemapperList());
+                }
+            };
 
-                response.SetContentFromFile(fullPath);
-                return response;
-            }
-
-            return HttpResponse.NotImplementedResponse;
+            RemapperCore.StartScanner();
+            app.Run("http://*:5100");
         }
     }
 }

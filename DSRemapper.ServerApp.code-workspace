@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../DSRemapper.Framework"
+		},
+		{
+			"path": "../DSRemapper.Core"
+		},
+		{
+			"path": "../../Projectos Visual/FireLibs/FireLibs.Web"
+		},
+		{
+			"path": "../DSRemapperApp"
+		}
+	],
+	"settings": {}
+}
