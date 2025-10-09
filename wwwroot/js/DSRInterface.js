@@ -166,7 +166,7 @@ connection.on("DevicesUpdated", function (devices) {
     renderControllers(devices);
 });
 
-connection.on("DeviceConsole", function (args) {
+connection.on("DeviceInfo", function (args) {
     //console.log(`Device Console update notification received. ${args}`);
     if (args.info !== undefined) {
         const ctrlItem = document.querySelector(`.ctrl-item[data-device-id="${args.id}"]`);
@@ -174,6 +174,18 @@ connection.on("DeviceConsole", function (args) {
             const infoDiv = ctrlItem.querySelector('.ctrl-info');
             if (infoDiv) {
                 infoDiv.textContent = args.info;
+            }
+        }
+    }
+});
+connection.on("DeviceConsole", function (args) {
+    console.log(`Device Console update notification received. ${args}`);
+    if (args.message !== undefined) {
+        const ctrlItem = document.querySelector(`.ctrl-item[data-device-id="${args.id}"]`);
+        if (ctrlItem) {
+            const consoleDiv = ctrlItem.querySelector('.ctrl-console');
+            if (consoleDiv) {
+                consoleDiv.textContent = args.message;
             }
         }
     }

@@ -90,7 +90,12 @@ namespace DSRemapper.ServerApp
             Remapper.OnDeviceInfo += async (id, info) =>
             {
                 //Console.WriteLine($"{id}: {info}");
-                await dsrHubContext.Clients.All.SendAsync("DeviceConsole", new { id, info });
+                await dsrHubContext.Clients.All.SendAsync("DeviceInfo", new { id, info});
+            };
+            Remapper.OnGlobalDeviceConsole += async (id, message, level) =>
+            {
+                //Console.WriteLine($"{id}: {message}");
+                await dsrHubContext.Clients.All.SendAsync("DeviceConsole", new { id, message, level});
             };
 
             RemapperCore.StartScanner();

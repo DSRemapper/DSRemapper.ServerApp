@@ -1,0 +1,90 @@
+[2025-10-09 16:51:11.541] Information: [DSRemapper.PluginLoader (0)] Controller image found: DSRemapper.COMM v0.2.0-beta.dsrp/COMM.png
+[2025-10-09 16:51:11.556] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.COMM v0.2.0-beta.dsrp/DSRemapper.COMM.dll
+[2025-10-09 16:51:11.558] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.COMM v0.2.0-beta.dsrp/FireLibs.IO.dll
+[2025-10-09 16:51:11.559] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.COMM v0.2.0-beta.dsrp/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+[2025-10-09 16:51:11.560] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.COMM v0.2.0-beta.dsrp/Microsoft.Extensions.DependencyInjection.dll
+[2025-10-09 16:51:11.561] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.COMM v0.2.0-beta.dsrp/Microsoft.Extensions.Logging.Abstractions.dll
+[2025-10-09 16:51:11.562] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.COMM v0.2.0-beta.dsrp/Microsoft.Extensions.Logging.dll
+[2025-10-09 16:51:11.563] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.COMM v0.2.0-beta.dsrp/Microsoft.Extensions.Options.dll
+[2025-10-09 16:51:11.564] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.COMM v0.2.0-beta.dsrp/Microsoft.Extensions.Primitives.dll
+[2025-10-09 16:51:11.565] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.COMM v0.2.0-beta.dsrp/System.CodeDom.dll
+[2025-10-09 16:51:11.567] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.COMM v0.2.0-beta.dsrp/System.Diagnostics.DiagnosticSource.dll
+[2025-10-09 16:51:11.568] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.COMM v0.2.0-beta.dsrp/System.IO.Ports.dll
+[2025-10-09 16:51:11.571] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.COMM v0.2.0-beta.dsrp/System.Management.dll
+[2025-10-09 16:51:11.571] Information: [DSRemapper.PluginLoader (0)] Controller image found: DSRemapper.DirectInput v0.1.0-beta.dsrp/DirectInput.png
+[2025-10-09 16:51:11.572] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DirectInput v0.1.0-beta.dsrp/DSRemapper.DirectInput.dll
+[2025-10-09 16:51:11.572] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DirectInput v0.1.0-beta.dsrp/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+[2025-10-09 16:51:11.574] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DirectInput v0.1.0-beta.dsrp/Microsoft.Extensions.DependencyInjection.dll
+[2025-10-09 16:51:11.575] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DirectInput v0.1.0-beta.dsrp/Microsoft.Extensions.Logging.Abstractions.dll
+[2025-10-09 16:51:11.576] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DirectInput v0.1.0-beta.dsrp/Microsoft.Extensions.Logging.dll
+[2025-10-09 16:51:11.577] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DirectInput v0.1.0-beta.dsrp/Microsoft.Extensions.Options.dll
+[2025-10-09 16:51:11.577] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DirectInput v0.1.0-beta.dsrp/Microsoft.Extensions.Primitives.dll
+[2025-10-09 16:51:11.579] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DirectInput v0.1.0-beta.dsrp/SharpDX.DirectInput.dll
+[2025-10-09 16:51:11.582] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DirectInput v0.1.0-beta.dsrp/SharpDX.dll
+[2025-10-09 16:51:11.584] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DirectInput v0.1.0-beta.dsrp/System.Diagnostics.DiagnosticSource.dll
+[2025-10-09 16:51:11.584] Information: [DSRemapper.PluginLoader (0)] Controller image found: DSRemapper.DualShock v0.2.1-beta.dsrp/DS4.png
+[2025-10-09 16:51:11.585] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/DSRemapper.DualShock.dll
+[2025-10-09 16:51:11.585] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/DSRemapper.DualShockStructs.dll
+[2025-10-09 16:51:11.586] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/FireLibs.IO.dll
+[2025-10-09 16:51:11.587] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+[2025-10-09 16:51:11.588] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/Microsoft.Extensions.DependencyInjection.dll
+[2025-10-09 16:51:11.589] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/Microsoft.Extensions.Logging.Abstractions.dll
+[2025-10-09 16:51:11.590] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/Microsoft.Extensions.Logging.dll
+[2025-10-09 16:51:11.591] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/Microsoft.Extensions.Options.dll
+[2025-10-09 16:51:11.592] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/Microsoft.Extensions.Primitives.dll
+[2025-10-09 16:51:11.594] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/System.CodeDom.dll
+[2025-10-09 16:51:11.595] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/System.Diagnostics.DiagnosticSource.dll
+[2025-10-09 16:51:11.596] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/System.IO.Hashing.dll
+[2025-10-09 16:51:11.597] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/System.IO.Ports.dll
+[2025-10-09 16:51:11.600] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.2.1-beta.dsrp/System.Management.dll
+[2025-10-09 16:51:11.602] Warning: [DSRemapper.PluginLoader (0)] Unable to load DSRemapper.MouseKeyboard v0.2.0-beta.dsrp/DirectInput.png
+[2025-10-09 16:51:11.604] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.MouseKeyboard v0.2.0-beta.dsrp/DSRemapper.MouseKeyboardInput.dll
+[2025-10-09 16:51:11.605] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.MouseKeyboard v0.2.0-beta.dsrp/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+[2025-10-09 16:51:11.606] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.MouseKeyboard v0.2.0-beta.dsrp/Microsoft.Extensions.DependencyInjection.dll
+[2025-10-09 16:51:11.607] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.MouseKeyboard v0.2.0-beta.dsrp/Microsoft.Extensions.Logging.Abstractions.dll
+[2025-10-09 16:51:11.607] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.MouseKeyboard v0.2.0-beta.dsrp/Microsoft.Extensions.Logging.dll
+[2025-10-09 16:51:11.608] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.MouseKeyboard v0.2.0-beta.dsrp/Microsoft.Extensions.Options.dll
+[2025-10-09 16:51:11.609] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.MouseKeyboard v0.2.0-beta.dsrp/Microsoft.Extensions.Primitives.dll
+[2025-10-09 16:51:11.611] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.MouseKeyboard v0.2.0-beta.dsrp/SharpDX.DirectInput.dll
+[2025-10-09 16:51:11.613] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.MouseKeyboard v0.2.0-beta.dsrp/SharpDX.dll
+[2025-10-09 16:51:11.615] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.MouseKeyboard v0.2.0-beta.dsrp/System.Diagnostics.DiagnosticSource.dll
+[2025-10-09 16:51:11.615] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.2.0-pre-alpha.dsrp/DSRemapper.DSROutput.dll
+[2025-10-09 16:51:11.616] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.2.0-pre-alpha.dsrp/DSRemapper.MouseKeyboardOutput.dll
+[2025-10-09 16:51:11.617] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.2.0-pre-alpha.dsrp/DSRemapper.RemapperLua.dll
+[2025-10-09 16:51:11.617] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.2.0-pre-alpha.dsrp/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+[2025-10-09 16:51:11.619] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.2.0-pre-alpha.dsrp/Microsoft.Extensions.DependencyInjection.dll
+[2025-10-09 16:51:11.620] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.2.0-pre-alpha.dsrp/Microsoft.Extensions.Logging.Abstractions.dll
+[2025-10-09 16:51:11.620] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.2.0-pre-alpha.dsrp/Microsoft.Extensions.Logging.dll
+[2025-10-09 16:51:11.621] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.2.0-pre-alpha.dsrp/Microsoft.Extensions.Options.dll
+[2025-10-09 16:51:11.622] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.2.0-pre-alpha.dsrp/Microsoft.Extensions.Primitives.dll
+[2025-10-09 16:51:11.625] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.2.0-pre-alpha.dsrp/MoonSharp.Interpreter.dll
+[2025-10-09 16:51:11.626] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.2.0-pre-alpha.dsrp/System.Diagnostics.DiagnosticSource.dll
+[2025-10-09 16:51:11.627] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.ViGEm v0.2.0-beta.dsrp/DSRemapper.DualShockStructs.dll
+[2025-10-09 16:51:11.628] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.ViGEm v0.2.0-beta.dsrp/DSRemapper.ViGEm.dll
+[2025-10-09 16:51:11.629] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.ViGEm v0.2.0-beta.dsrp/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+[2025-10-09 16:51:11.630] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.ViGEm v0.2.0-beta.dsrp/Microsoft.Extensions.DependencyInjection.dll
+[2025-10-09 16:51:11.631] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.ViGEm v0.2.0-beta.dsrp/Microsoft.Extensions.Logging.Abstractions.dll
+[2025-10-09 16:51:11.632] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.ViGEm v0.2.0-beta.dsrp/Microsoft.Extensions.Logging.dll
+[2025-10-09 16:51:11.632] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.ViGEm v0.2.0-beta.dsrp/Microsoft.Extensions.Options.dll
+[2025-10-09 16:51:11.633] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.ViGEm v0.2.0-beta.dsrp/Microsoft.Extensions.Primitives.dll
+[2025-10-09 16:51:11.636] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.ViGEm v0.2.0-beta.dsrp/Nefarius.ViGEm.Client.dll
+[2025-10-09 16:51:11.637] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.ViGEm v0.2.0-beta.dsrp/System.Diagnostics.DiagnosticSource.dll
+[2025-10-09 16:51:11.638] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.VJoy v0.2.0-beta.dsrp/DSRemapper.VJoy.dll
+[2025-10-09 16:51:11.638] Information: [DSRemapper.PluginLoader (0)] Native dll found: DSRemapper.VJoy v0.2.0-beta.dsrp/vJoyInterface.ndll
+[2025-10-09 16:51:11.638] Information: [DSRemapper.PluginLoader (0)] Native dll currently installed: G:\DSR Projects\DSRemapper.ServerApp\vJoyInterface.dll
+[2025-10-09 16:51:11.640] Information: [DSRemapper.PluginLoader (0)] Scanner plugin found: DSRemapper.COMM.COMMScanner
+[2025-10-09 16:51:11.651] Information: [DSRemapper.PluginLoader (0)] Scanner plugin found: DSRemapper.DirectInput.DIScanner
+[2025-10-09 16:51:11.659] Information: [DSRemapper.PluginLoader (0)] Scanner plugin found: DSRemapper.DualShock.DualShockScanner
+[2025-10-09 16:51:11.669] Information: [DSRemapper.PluginLoader (0)] Scanner plugin found: DSRemapper.MouseKeyboardInput.KeyboardScanner
+[2025-10-09 16:51:11.669] Information: [DSRemapper.PluginLoader (0)] Scanner plugin found: DSRemapper.MouseKeyboardInput.MouseScanner
+[2025-10-09 16:51:11.677] Information: [DSRemapper.PluginLoader (0)] Remapper plugin for ".lua" files found: DSRemapper.RemapperLua.LuaInterpreter
+[2025-10-09 16:51:11.677] Information: [DSRemapper.PluginLoader (0)] Remapper plugin for ".slua" files found: DSRemapper.RemapperLua.LuaInterpreter
+[2025-10-09 16:51:11.685] Information: [DSRemapper.PluginLoader (0)] Output plugin found: DSRemapper.ViGEm.DS4
+[2025-10-09 16:51:11.685] Information: [DSRemapper.PluginLoader (0)] Output plugin found: DSRemapper.ViGEm.Xbox
+[2025-10-09 16:51:11.692] Information: [DSRemapper.PluginLoader (0)] Output plugin found: DSRemapper.VJoyCtrl.VJoyCtrl
+[2025-10-09 16:51:12.594] Information: [DSRemapper.Dualshock (0)] DualShock 4 [40:1B:5F:D6:AB:0F]: Connected using USB
+[2025-10-09 16:51:12.597] Information: [DSRempper.RemapperCore (0)] Physical device plugged: Wireless Controller [5b5ce0d0-3904-11ee-8001-444553540000]
+[2025-10-09 16:51:12.597] Information: [DSRempper.RemapperCore (0)] Physical device plugged: DualShock 4 [40:1B:5F:D6:AB:0F]
+[2025-10-09 16:51:12.597] Information: [DSRempper.RemapperCore (0)] Physical device plugged: Teclado [6f1d2b61-d5a0-11cf-bfc7-444553540000]
+[2025-10-09 16:51:12.598] Information: [DSRempper.RemapperCore (0)] Physical device plugged: Mouse [6f1d2b60-d5a0-11cf-bfc7-444553540000]
+[2025-10-09 16:51:17.096] Information: [DSRemapper.Dualshock (0)] DualShock 4 [40:1B:5F:D6:AB:0F]: buffer count set to 3
