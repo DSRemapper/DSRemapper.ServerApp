@@ -171,7 +171,7 @@ connection.on("DeviceConsole", function (args) {
     if (args.info !== undefined) {
         const ctrlItem = document.querySelector(`.ctrl-item[data-device-id="${args.id}"]`);
         if (ctrlItem) {
-            const infoDiv = ctrlItem.querySelector('.ctrl-info.monospace');
+            const infoDiv = ctrlItem.querySelector('.ctrl-info');
             if (infoDiv) {
                 infoDiv.textContent = args.info;
             }
