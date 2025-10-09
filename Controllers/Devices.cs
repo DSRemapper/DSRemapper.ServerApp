@@ -23,6 +23,7 @@ namespace DSRemapper.ServerApp.Controllers
                 remapper.Id,
                 remapper.Name,
                 remapper.Type,
+                remapper.Controller.ImgPath,
                 remapper.IsConnected,
                 remapper.IsRunning,
                 remapper.CurrentProfile,

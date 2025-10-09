@@ -10,10 +10,13 @@
 			"path": "../DSRemapper.Core"
 		},
 		{
-			"path": "../../Projectos Visual/FireLibs/FireLibs.Web"
+			"path": "../DSRemapperApp"
 		},
 		{
-			"path": "../DSRemapperApp"
+			"path": "../DSRemapper.DualShock"
+		},
+		{
+			"path": "../DSRemapper.RemapperLua"
 		}
 	],
 	"settings": {}

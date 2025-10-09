@@ -77,7 +77,7 @@ namespace DSRemapper.ServerApp
 
 
             dsrHubContext = app.Services.GetRequiredService<IHubContext<DSRHub>>();
-            
+
             RemapperCore.OnUpdate += async () =>
             {
                 if (dsrHubContext != null)
@@ -86,6 +86,11 @@ namespace DSRemapper.ServerApp
 
                     await dsrHubContext.Clients.All.SendAsync("DevicesUpdated", DevicesController.GetRemapperList());
                 }
+            };
+            Remapper.OnDeviceInfo += async (id, info) =>
+            {
+                //Console.WriteLine($"{id}: {info}");
+                await dsrHubContext.Clients.All.SendAsync("DeviceConsole", new { id, info });
             };
 
             RemapperCore.StartScanner();

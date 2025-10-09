@@ -31,7 +31,8 @@ function renderControllers(devices) {
         ctrlItem.id = `ctrl-${device.id.replace(/[^a-zA-Z0-9-_]/g, '_')}`; // Sanitiza el ID
         ctrlItem.dataset.deviceId = device.id;
 
-        clone.querySelector(".ctrl-img img").src = device.image;
+        //console.log(`/api/images/${device.imgPath}`)
+        clone.querySelector(".ctrl-img img").src = `/api/images/raw/${device.imgPath}`;
         clone.querySelector(".ctrl-title").textContent =`[${device.type}] ${device.name}`;
         //clone.querySelector(".ctrl-info").textContent = device.status;
         //clone.querySelector(".ctrl-bbar input[type='checkbox']").checked = device.autoConnect;
@@ -163,6 +164,19 @@ const connection = new signalR.HubConnectionBuilder()
 connection.on("DevicesUpdated", function (devices) {
     console.log("Device update notification received with new device list. Rendering...");
     renderControllers(devices);
+});
+
+connection.on("DeviceConsole", function (args) {
+    //console.log(`Device Console update notification received. ${args}`);
+    if (args.info !== undefined) {
+        const ctrlItem = document.querySelector(`.ctrl-item[data-device-id="${args.id}"]`);
+        if (ctrlItem) {
+            const infoDiv = ctrlItem.querySelector('.ctrl-info.monospace');
+            if (infoDiv) {
+                infoDiv.textContent = args.info;
+            }
+        }
+    }
 });
 
 // Start the connection and handle potential errors

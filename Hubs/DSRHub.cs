@@ -1,3 +1,4 @@
+using DSRemapper.Framework;
 using Microsoft.AspNetCore.SignalR;
 
 namespace DSRemapper.ServerApp.Hubs
@@ -9,9 +10,11 @@ namespace DSRemapper.ServerApp.Hubs
             switch (action)
             {
                 case "connect":
+                    RemapperCore.Remappers.Find((r) => r.Id == controllerId)?.Start();
                     Console.WriteLine($"Connect {controllerId}");
                     break;
                 case "disconnect":
+                    RemapperCore.Remappers.Find((r) => r.Id == controllerId)?.Stop();
                     Console.WriteLine($"Disconnect {controllerId}");
                     break;
                 case "reload-profile":
