@@ -53,8 +53,23 @@ namespace DSRemapper.ServerApp.Controllers
         public ActionResult SetProfile(string id, [FromBody] string profile)
         {
             GetRemapper(id)?.SetProfile(profile ?? "");
-            //DSRConfigs.SetLastProfile(id, profile ?? "");
-            //Console.WriteLine($"=====[ {id} - {profile} ]=====");
+            return Ok();
+        }
+        [HttpGet("{id}/autoconnect")]
+        public ActionResult GetAutoConnect(string id) =>
+            (GetRemapper(id) is Remapper remapper && DSRConfigs.GetConfig(remapper.Id) is RemapperConfig config)
+            ? Ok(config.AutoConnect) : NotFound();
+
+        [HttpPost("{id}/autoconnect")]
+        public ActionResult SetAutoConnect(string id, [FromBody] bool autoConnect)
+        {
+            Remapper? remapper = GetRemapper(id);
+            if (remapper != null)
+                DSRConfigs.SetAutoConnect(id, autoConnect);
+
+            if (autoConnect)
+                remapper?.Start();
+
             return Ok();
         }
     }

@@ -2,6 +2,7 @@ async function hidePluginsPanel(){
     document.getElementById("app").classList.toggle("hide-side-panel");
 }
 
+// Opens Control Panel Windows Game Devices window
 async function openWindowsDevices() {
     try {
         const response = await fetch("/api/utils/windows-devices");
@@ -13,6 +14,7 @@ async function openWindowsDevices() {
     }
 }
 
+// Renders the list of controllers
 function renderControllers(devices) {
     const mainView = document.getElementById("main-view");
     const template = document.getElementById("controller-template");
@@ -31,23 +33,19 @@ function renderControllers(devices) {
         ctrlItem.id = `ctrl-${device.id.replace(/[^a-zA-Z0-9-_]/g, '_')}`; // Sanitiza el ID
         ctrlItem.dataset.deviceId = device.id;
 
-        //console.log(`/api/images/${device.imgPath}`)
         clone.querySelector(".ctrl-img img").src = `/api/images/raw/${device.imgPath}`;
         clone.querySelector(".ctrl-title").textContent =`[${device.type}] ${device.name}`;
-        //clone.querySelector(".ctrl-info").textContent = device.status;
-        //clone.querySelector(".ctrl-bbar input[type='checkbox']").checked = device.autoConnect;
                 
         ctrlItem.addEventListener('click', (event) => {
-            // Nos aseguramos de que el clic fue en un botón con data-action
             const button = event.target.closest('button[data-action]');
             
             if (!button) return;
             const action = button.dataset.action;
             const controllerId = ctrlItem.dataset.deviceId;
             
-            console.log(`${controllerId} - ${action}`);
+            //console.log(`${controllerId} - ${action}`);
             if (action && controllerId) {
-                console.log(`Enviando acción '${action}' para el controlador '${controllerId}'`);
+                //console.log(`Enviando acción '${action}' para el controlador '${controllerId}'`);
                 connection.invoke("PerformControllerAction", controllerId, action)
                     .catch(err => console.error(`Error al invocar PerformControllerAction: ${err.toString()}`));
             }
@@ -62,14 +60,25 @@ function renderControllers(devices) {
                 await setDeviceProfile(deviceId, selectedProfile);
             }
         });
+        const autoConnectCheckbox = clone.querySelector('.ctrl-auto-connect');
+        autoConnectCheckbox.checked = device.autoConnect;
+        autoConnectCheckbox.addEventListener('change', async (event) => {
+            const autoConnect = event.target.checked;
+            const deviceId = ctrlItem.dataset.deviceId;
+
+            if (deviceId) {
+                await setDeviceAutoConnect(deviceId, autoConnect);
+            }
+        });
+
 
         mainView.appendChild(clone);
     }
 
-    // Ahora que todos los <select> de los controladores están en el DOM, los poblamos.
     populateProfiles();
 }
 
+// Populates the list of controllers
 async function populateControllers() {
     try {
         const response = await fetch("/api/devices");
@@ -86,6 +95,7 @@ async function populateControllers() {
     }
 }
 
+// Populates the lists of profiles inside the controllers
 async function populateProfiles() {
     try {
         const response = await fetch("/api/profiles");
@@ -130,6 +140,7 @@ async function populateProfiles() {
     }
 }
 
+// Sends a post request to set the current profile of the controller
 async function setDeviceProfile(deviceId, profileName) {
     try {
         const response = await fetch(`/api/devices/${deviceId}/profile`, {
@@ -150,24 +161,48 @@ async function setDeviceProfile(deviceId, profileName) {
         console.error(`Error setting profile for ${deviceId}:`, error);
     }
 }
+// Sends a post request to set the auto connect config of the controller
+async function setDeviceAutoConnect(deviceId, autoConnect) {
+    try {
+        const response = await fetch(`/api/devices/${deviceId}/autoconnect`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            // Enviamos el nombre del perfil como un string JSON en el cuerpo
+            body: JSON.stringify(autoConnect)
+        });
 
+        if (!response.ok) {
+            console.error(`Failed to set auto connect for ${deviceId}:`, await response.text());
+        } else {
+            console.log(`Successfully set auto connect '${autoConnect}' for device '${deviceId}'.`);
+        }
+    } catch (error) {
+        console.error(`Error setting auto connect for ${deviceId}:`, error);
+    }
+}
+
+// Waits until the page is loaded to connect to SignalR and to populate the controllers
 document.addEventListener("DOMContentLoaded", async function () {
     startSignalRConnection();
     await populateControllers();
 });
 
+// Connection to the SignalR hub on the server
 const connection = new signalR.HubConnectionBuilder()
     .withUrl("/dsrHub")
     .withAutomaticReconnect()
     .build();
 
+// Event listener for devices update from dsrHub
 connection.on("DevicesUpdated", function (devices) {
     console.log("Device update notification received with new device list. Rendering...");
     renderControllers(devices);
 });
 
+// Event listener for the device info update from dsrHub
 connection.on("DeviceInfo", function (args) {
-    //console.log(`Device Console update notification received. ${args}`);
     if (args.info !== undefined) {
         const ctrlItem = document.querySelector(`.ctrl-item[data-device-id="${args.id}"]`);
         if (ctrlItem) {
@@ -178,8 +213,8 @@ connection.on("DeviceInfo", function (args) {
         }
     }
 });
+// Event listener for the device console update from dsrHub
 connection.on("DeviceConsole", function (args) {
-    console.log(`Device Console update notification received. ${args}`);
     if (args.message !== undefined) {
         const ctrlItem = document.querySelector(`.ctrl-item[data-device-id="${args.id}"]`);
         if (ctrlItem) {

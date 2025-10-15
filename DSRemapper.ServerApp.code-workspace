@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "../DSRemapper.RemapperLua"
+		},
+		{
+			"path": "../DSRemapper.DualShockStructs"
 		}
 	],
 	"settings": {}
