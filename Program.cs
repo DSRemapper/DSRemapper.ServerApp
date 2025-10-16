@@ -52,6 +52,7 @@ namespace DSRemapper.ServerApp
             {
                 logger.LogInformation("Stopping DSRemapper Framework...");
                 RemapperCore.Stop();
+                PluginLoader.FreeAllPlugins();
                 logger.LogInformation("DSRemapper Framework stopped.");
             });
 
