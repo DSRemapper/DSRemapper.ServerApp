@@ -20,6 +20,12 @@
 		},
 		{
 			"path": "../DSRemapper.DualShockStructs"
+		},
+		{
+			"path": "../DSRemapper.DSROutput"
+		},
+		{
+			"path": "../DSRemapper.MouseKeyboardOutput"
 		}
 	],
 	"settings": {}

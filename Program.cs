@@ -8,11 +8,14 @@ using DSRemapper.ServerApp.Hubs;
 using DSRemapper.Core.Loggers;
 using Microsoft.AspNetCore.SignalR;
 using DSRemapper.ServerApp.Controllers;
+using System.Collections.Concurrent;
 
 namespace DSRemapper.ServerApp
 {
     internal class Program
     {
+        private static readonly ConcurrentDictionary<string, DateTimeOffset> LastSentTimes = new();
+        private static readonly TimeSpan ThrottleInterval = TimeSpan.FromSeconds(1/20);
         static void Main(string[] args)
         {
             IHubContext<DSRHub>? dsrHubContext = null;
@@ -85,18 +88,30 @@ namespace DSRemapper.ServerApp
                 {
                     logger.LogInformation("Device list updated, notifying clients.");
 
-                    await dsrHubContext.Clients.All.SendAsync("DevicesUpdated", DevicesController.GetRemapperList());
+                    await dsrHubContext.Clients.Group("IndexPage").SendAsync("DevicesUpdated", DevicesController.GetRemapperList());
                 }
             };
             Remapper.OnDeviceInfo += async (id, info) =>
             {
                 //Console.WriteLine($"{id}: {info}");
-                await dsrHubContext.Clients.All.SendAsync("DeviceInfo", new { id, info});
+                await dsrHubContext.Clients.Group("IndexPage").SendAsync("DeviceInfo", new { id, info});
             };
             Remapper.OnGlobalDeviceConsole += async (id, message, level) =>
             {
                 //Console.WriteLine($"{id}: {message}");
-                await dsrHubContext.Clients.All.SendAsync("DeviceConsole", new { id, message, level});
+                await dsrHubContext.Clients.Group("IndexPage").SendAsync("DeviceConsole", new { id, message, level });
+            };
+            Remapper.OnGlobalRead += async (id, report) =>
+            {
+                var currentTime = DateTimeOffset.UtcNow;
+                DateTimeOffset lastSendTime = LastSentTimes.GetOrAdd(id, currentTime);
+                var timeSinceLastSend = currentTime - lastSendTime;
+                if (timeSinceLastSend >= ThrottleInterval)
+                {
+                    await dsrHubContext.Clients.Group($"ctrl-{id}").SendAsync("InputData", report);
+                    
+                    LastSentTimes.TryUpdate(id, currentTime, lastSendTime);
+                }
             };
 
             RemapperCore.StartScanner();

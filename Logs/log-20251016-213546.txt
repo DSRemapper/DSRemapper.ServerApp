@@ -1,0 +1,125 @@
+[2025-10-16 21:35:46.291] Information: [DSRemapper.PluginLoader (0)] Controller image found: DSRemapper.DualShock v0.3.1-beta.dsrp/DS4.png
+[2025-10-16 21:35:46.294] Information: [DSRemapper.PluginLoader (0)] Controller image found: DSRemapper.DualShock v0.3.1-beta.dsrp/DS5.png
+[2025-10-16 21:35:46.295] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/DSRemapper.DualShock.dll
+[2025-10-16 21:35:46.296] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/DSRemapper.DualShockStructs.dll
+[2025-10-16 21:35:46.297] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/FireLibs.IO.dll
+[2025-10-16 21:35:46.298] Information: [DSRemapper.PluginLoader (0)] Native dll found: DSRemapper.DualShock v0.3.1-beta.dsrp/hidapi.ndll
+[2025-10-16 21:35:46.298] Information: [DSRemapper.PluginLoader (0)] Native dll currently installed: /mnt/Disco Local D/DSR Project/DSRemapper.ServerApp/hidapi.dll
+[2025-10-16 21:35:46.299] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/HidApi.Net.dll
+[2025-10-16 21:35:46.301] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+[2025-10-16 21:35:46.302] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/Microsoft.Extensions.DependencyInjection.dll
+[2025-10-16 21:35:46.304] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/Microsoft.Extensions.Logging.Abstractions.dll
+[2025-10-16 21:35:46.305] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/Microsoft.Extensions.Logging.dll
+[2025-10-16 21:35:46.306] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/Microsoft.Extensions.Options.dll
+[2025-10-16 21:35:46.307] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/Microsoft.Extensions.Primitives.dll
+[2025-10-16 21:35:46.309] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/System.CodeDom.dll
+[2025-10-16 21:35:46.311] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/System.Diagnostics.DiagnosticSource.dll
+[2025-10-16 21:35:46.312] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/System.IO.Hashing.dll
+[2025-10-16 21:35:46.313] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/System.IO.Ports.dll
+[2025-10-16 21:35:46.316] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/System.Management.dll
+[2025-10-16 21:35:46.317] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.DualShock v0.3.1-beta.dsrp/WCharT.Net.dll
+[2025-10-16 21:35:46.318] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.3.0-pre-alpha.dsrp/DSRemapper.DSROutput.dll
+[2025-10-16 21:35:46.319] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.3.0-pre-alpha.dsrp/DSRemapper.MouseKeyboardOutput.dll
+[2025-10-16 21:35:46.321] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.3.0-pre-alpha.dsrp/DSRemapper.RemapperLua.dll
+[2025-10-16 21:35:46.322] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.3.0-pre-alpha.dsrp/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+[2025-10-16 21:35:46.323] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.3.0-pre-alpha.dsrp/Microsoft.Extensions.DependencyInjection.dll
+[2025-10-16 21:35:46.324] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.3.0-pre-alpha.dsrp/Microsoft.Extensions.Logging.Abstractions.dll
+[2025-10-16 21:35:46.325] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.3.0-pre-alpha.dsrp/Microsoft.Extensions.Logging.dll
+[2025-10-16 21:35:46.326] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.3.0-pre-alpha.dsrp/Microsoft.Extensions.Options.dll
+[2025-10-16 21:35:46.326] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.3.0-pre-alpha.dsrp/Microsoft.Extensions.Primitives.dll
+[2025-10-16 21:35:46.329] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.3.0-pre-alpha.dsrp/MoonSharp.Interpreter.dll
+[2025-10-16 21:35:46.331] Information: [DSRemapper.PluginLoader (0)] Assembly found: DSRemapper.RemapperLua v0.3.0-pre-alpha.dsrp/System.Diagnostics.DiagnosticSource.dll
+[2025-10-16 21:35:46.335] Information: [DSRemapper.PluginLoader (0)] Scanner plugin found: DSRemapper.DualShock.DualShockScanner
+[2025-10-16 21:35:46.353] Information: [DSRemapper.PluginLoader (0)] Remapper plugin for ".lua" files found: DSRemapper.RemapperLua.LuaInterpreter
+[2025-10-16 21:35:46.353] Information: [DSRemapper.PluginLoader (0)] Remapper plugin for ".slua" files found: DSRemapper.RemapperLua.LuaInterpreter
+[2025-10-16 21:45:32.197] Information: [DSRemapper.Dualsense (0)] DualSense [6B749EC46E4A7E31]: Connected using Bluetooth
+[2025-10-16 21:45:32.200] Information: [DSRempper.RemapperCore (0)] Physical device plugged: DualSense [6B749EC46E4A7E31]
+[2025-10-16 21:45:44.937] Information: [DSRemapper.Dualsense (0)] DualSense [6B749EC46E4A7E31]: buffer count set to 0
+[2025-10-16 21:58:32.237] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.242] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.247] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.255] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.259] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.265] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.268] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.271] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.274] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.276] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.279] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.283] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.287] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.289] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.296] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.300] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.302] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.307] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.330] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.349] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.365] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220
+[2025-10-16 21:58:32.386] Error: [DSRempper.Remapper(DualSense,6B749EC46E4A7E31) (0)] HidApi.Net:
+i
+   at DSRemapper.DualShock.DualSense.GetInputReport()
+   at DSRemapper.Framework.Remapper.RemapThread() in /mnt/Disco Local D/DSR Project/DSRemapper.Framework/Remapper.cs:line 220

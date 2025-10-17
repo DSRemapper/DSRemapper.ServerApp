@@ -22,13 +22,14 @@ namespace DSRemapper.ServerApp.Hubs
                     remapper?.ReloadProfile();
                     Console.WriteLine($"Reload Profile {controllerId}");
                     break;
-                case "input-test":
-                    Console.WriteLine($"Input Test {controllerId}");
-                    break;
                 default:
                     Console.WriteLine($"Acción desconocida: {action}");
                     break;
             }
+        }
+        public async Task JoinGroup(string groupId)
+        {
+            await Groups.AddToGroupAsync(Context.ConnectionId, groupId);
         }
     }
 }

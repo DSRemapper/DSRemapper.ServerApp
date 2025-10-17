@@ -44,6 +44,9 @@ function renderControllers(devices) {
             const controllerId = ctrlItem.dataset.deviceId;
             
             //console.log(`${controllerId} - ${action}`);
+            if (action == "input-test"){
+                window.open(`/inputTest.html?id=${btoa(device.id)}`, "_blank");
+            }
             if (action && controllerId) {
                 //console.log(`Enviando acción '${action}' para el controlador '${controllerId}'`);
                 connection.invoke("PerformControllerAction", controllerId, action)
@@ -230,6 +233,8 @@ connection.on("DeviceConsole", function (args) {
 async function startSignalRConnection() {
     try {
         await connection.start();
+        connection.invoke("JoinGroup","IndexPage")
+            .catch(err => console.error(`Error al unirse al grupo IndexPage: ${err.toString()}`));
         console.log("SignalR Connected successfully.");
     } catch (err) {
         console.error("SignalR Connection Failed: ", err);

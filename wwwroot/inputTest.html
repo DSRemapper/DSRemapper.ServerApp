@@ -6,122 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DSRemapper</title>
     <base href="/" />
-    <script src="js/jsinterop.js"></script>
-    <link href="css/app.css" rel="stylesheet" />
-    <link href="WinFormsBlazor.styles.css" rel="stylesheet" />
+    <link rel="icon" href="/Images/DSRLogo.png" type="image/png">
     <link href="css/DSRInterface.css" rel="stylesheet" />
     <link href="css/DSRControllers.css" rel="stylesheet" />
     <link href="css/DSRPlugins.css" rel="stylesheet" />
     <link href="css/DSRAbout.css" rel="stylesheet" />
     <link href="css/DSRConsole.css" rel="stylesheet" />
     <link href="css/DSRInputTest.css" rel="stylesheet" />
+    <script src="js/signalr.min.js"></script>
+    <script src="js/DSRInputTest.js"></script>
 </head>
 
-<body>
-
-    <div id="app">
-        <div id="subapp">
-            <nav id="nav-bar">
-                <button>Scroll to end</button>
-            </nav>
-            <div id="input-test-view" class="column-span2">
-                <div class="axis-item">
-                    <span>@Name</span>
-                    <svg width="100px" height="15">
-                        <rect x="0" y="0" width="100" height="15" rx="3" ry="3" fill="#282828"></rect>
-                        <rect x="0" y="0" width="50" height="15" rx="3" ry="3" fill="#aaa"></rect>
-                    </svg>
-                    <span>@Value</span>
-                </div>
-
-                <div class="button-item">
-                    <span>@Name</span>
-                    <svg width="50px" height="25px">
-                        <rect x="0" y="0" width="50" height="25" rx="4" ry="4" fill="#282828"></rect>
-                    </svg>
-                </div>
-
-                <div class="pov-item">
-                    <span>@Name</span>
-                    <svg width="50px" height="50px">
-                        <polygon points="17,0 33,0 33,15 25,23 17,15"
-                                 fill="#aaa"></polygon>
-                        <polygon points="17,50 33,50 33,35 25,27 17,35"
-                                 fill="#282828"></polygon>
-                        <polygon points="0,17 0,33 15,33 23,25 15,17"
-                                 fill="#aaa"></polygon>
-                        <polygon points="50,17 50,33 35,33 27,25 35,17"
-                                 fill="#282828"></polygon>
-                    </svg>
-                    <span>@Value.Angle</span>
-                </div>
-                
-                <div class="six-item">
-                    <span>SixAxis[0]<br>Accelerometer</span>
-                    <svg width="100px" height="10">
-                        <rect x="0" y="0" width="100" height="10" rx="3" ry="3" fill="#282828"></rect>
-                        <rect x="0" y="0" width="50" height="10" rx="3" ry="3" fill="#aaa"></rect>
-                    </svg>
-                    <span>@Value.X</span>
-                    <svg width="100px" height="10">
-                        <rect x="0" y="0" width="100" height="10" rx="3" ry="3" fill="#282828"></rect>
-                        <rect x="0" y="0" width="50" height="10" rx="3" ry="3" fill="#aaa"></rect>
-                    </svg>
-                    <span>@Value.Y</span>
-                    <svg width="100px" height="10">
-                        <rect x="0" y="0" width="100" height="10" rx="3" ry="3" fill="#282828"></rect>
-                        <rect x="0" y="0" width="50" height="10" rx="3" ry="3" fill="#aaa"></rect>
-                    </svg>
-                    <span>@Value.Z</span>
-                </div>
-                
-                <div class="quat-item">
-                    <span>@Name</span>
-                    <div>
-                        <svg width="50" height="8">
-                            <rect x="0" y="0" width="50" height="8" rx="3" ry="3" fill="#282828"></rect>
-                            <rect x="0" y="0" width="25" height="8" rx="3" ry="3" fill="#aaa"></rect>
-                        </svg>
-                        <span>@Value.X</span>
-                        <svg width="50" height="8">
-                            <rect x="0" y="0" width="50" height="8" rx="3" ry="3" fill="#282828"></rect>
-                            <rect x="0" y="0" width="25" height="8" rx="3" ry="3" fill="#aaa"></rect>
-                        </svg>
-                        <span>@Value.Y</span>
-                        <svg width="50" height="8">
-                            <rect x="0" y="0" width="50" height="8" rx="3" ry="3" fill="#282828"></rect>
-                            <rect x="0" y="0" width="25" height="8" rx="3" ry="3" fill="#aaa"></rect>
-                        </svg>
-                        <span>@Value.Z</span>
-                        <svg width="50" height="8">
-                            <rect x="0" y="0" width="50" height="8" rx="3" ry="3" fill="#282828"></rect>
-                            <rect x="0" y="0" width="25" height="8" rx="3" ry="3" fill="#aaa"></rect>
-                        </svg>
-                        <span>@Value.W</span>
-                    </div>
-                </div>
-
-                <div class="touch-item">
-                    <span>@Name</span>
-                    <svg width="100px" height="60px">
-                        <rect x="0" y="0" width="100" height="60" rx="3" ry="3" fill="#282828"></rect>
-                        <circle cx="@svgxVal" cy="@svgyVal" r="3" fill="@(Value.Pressed?"#aaa":"#555")"></circle>
-                    </svg>
-                    <span>Id: @Value.Id</span>
-                    <span>@Value.Pos.X<br>@Value.Pos.Y</span>
-                </div>
-            </div>
-            <footer id="footer">Autoscroll</footer>
-            </div>
+<body id="app">
+    <nav id="nav-bar">
+        Top bar
+    </nav>
+    <div id="input-test-view" class="column-span2">
+        <div id="test" class="ctrl-console monospace">hello world</div>
     </div>
-
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-
-    <script src="_framework/blazor.webview.js"></script>
+    <footer id="footer">Footer</footer>
+    <template id="axis-template">
+        <div class="axis-item">
+            <span>@Name</span>
+            <svg width="100px" height="15">
+                <rect x="0" y="0" width="100" height="15" rx="3" ry="3" fill="#282828"></rect>
+                <rect x="0" y="0" width="50" height="15" rx="3" ry="3" fill="#aaa"></rect>
+            </svg>
+            <span>@Value</span>
+        </div>
+    </template>
+    <template id="button-template">
+        <div class="button-item">
+            <span>@Name</span>
+            <svg width="50px" height="25px">
+                <rect x="0" y="0" width="50" height="25" rx="4" ry="4" fill="#282828"></rect>
+            </svg>
+        </div>
+    </template>
+    <template id="pov-template">
+        <div class="pov-item">
+            <span>@Name</span>
+            <svg width="50px" height="50px">
+                <polygon points="17,0 33,0 33,15 25,23 17,15" fill="#aaa"></polygon>
+                <polygon points="17,50 33,50 33,35 25,27 17,35" fill="#282828"></polygon>
+                <polygon points="0,17 0,33 15,33 23,25 15,17" fill="#aaa"></polygon>
+                <polygon points="50,17 50,33 35,33 27,25 35,17" fill="#282828"></polygon>
+            </svg>
+            <span>@Value.Angle</span>
+        </div>
+    </template>
+    <template id="six-template">
+        <div class="six-item">
+            <span>SixAxis[0]<br>Accelerometer</span>
+            <svg width="100px" height="10">
+                <rect x="0" y="0" width="100" height="10" rx="3" ry="3" fill="#282828"></rect>
+                <rect x="0" y="0" width="50" height="10" rx="3" ry="3" fill="#aaa"></rect>
+            </svg>
+            <span>@Value.X</span>
+            <svg width="100px" height="10">
+                <rect x="0" y="0" width="100" height="10" rx="3" ry="3" fill="#282828"></rect>
+                <rect x="0" y="0" width="50" height="10" rx="3" ry="3" fill="#aaa"></rect>
+            </svg>
+            <span>@Value.Y</span>
+            <svg width="100px" height="10">
+                <rect x="0" y="0" width="100" height="10" rx="3" ry="3" fill="#282828"></rect>
+                <rect x="0" y="0" width="50" height="10" rx="3" ry="3" fill="#aaa"></rect>
+            </svg>
+            <span>@Value.Z</span>
+        </div>
+    </template>
+    <template id="quat-template">
+        <div class="quat-item">
+            <span>@Name</span>
+            <div>
+                <svg width="50" height="8">
+                    <rect x="0" y="0" width="50" height="8" rx="3" ry="3" fill="#282828"></rect>
+                    <rect x="0" y="0" width="25" height="8" rx="3" ry="3" fill="#aaa"></rect>
+                </svg>
+                <span>@Value.X</span>
+                <svg width="50" height="8">
+                    <rect x="0" y="0" width="50" height="8" rx="3" ry="3" fill="#282828"></rect>
+                    <rect x="0" y="0" width="25" height="8" rx="3" ry="3" fill="#aaa"></rect>
+                </svg>
+                <span>@Value.Y</span>
+                <svg width="50" height="8">
+                    <rect x="0" y="0" width="50" height="8" rx="3" ry="3" fill="#282828"></rect>
+                    <rect x="0" y="0" width="25" height="8" rx="3" ry="3" fill="#aaa"></rect>
+                </svg>
+                <span>@Value.Z</span>
+                <svg width="50" height="8">
+                    <rect x="0" y="0" width="50" height="8" rx="3" ry="3" fill="#282828"></rect>
+                    <rect x="0" y="0" width="25" height="8" rx="3" ry="3" fill="#aaa"></rect>
+                </svg>
+                <span>@Value.W</span>
+            </div>
+        </div>
+    </template>
+    <template id="touch-template">
+        <div class="touch-item">
+            <span>@Name</span>
+            <svg width="100px" height="60px">
+                <rect x="0" y="0" width="100" height="60" rx="3" ry="3" fill="#282828"></rect>
+                <circle cx="@svgxVal" cy="@svgyVal" r="3" fill="@(Value.Pressed?" #aaa":"#555")"></circle>
+            </svg>
+            <span>Id: @Value.Id</span>
+            <span>@Value.Pos.X<br>@Value.Pos.Y</span>
+        </div>
+    </template>
 </body>
 
 </html>
