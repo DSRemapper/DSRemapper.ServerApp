@@ -14,6 +14,10 @@ async function openWindowsDevices() {
     }
 }
 
+function openDebugConsole(){
+    window.open("/console.html", "_blank");
+}
+
 // Renders the list of controllers
 function renderControllers(devices) {
     const mainView = document.getElementById("main-view");
@@ -54,6 +58,17 @@ function renderControllers(devices) {
             }
         });
 
+        const buttonBar = clone.querySelector('.ctrl-bbar');
+        if (device.customActions && buttonBar) {
+            for (const actionName of device.customActions) {
+                const button = document.createElement('button');
+                button.dataset.action = actionName;
+                button.innerText = actionName;
+                // Prepend the button to the bar
+                buttonBar.appendChild(button, buttonBar.firstChild);
+            }
+        }
+
         const profileSelector = clone.querySelector('.profile-selector');
         profileSelector.addEventListener('change', async (event) => {
             const selectedProfile = event.target.value;
@@ -73,6 +88,8 @@ function renderControllers(devices) {
                 await setDeviceAutoConnect(deviceId, autoConnect);
             }
         });
+
+        
 
 
         mainView.appendChild(clone);
@@ -223,7 +240,15 @@ connection.on("DeviceConsole", function (args) {
         if (ctrlItem) {
             const consoleDiv = ctrlItem.querySelector('.ctrl-console');
             if (consoleDiv) {
-                consoleDiv.textContent = args.message;
+                //console.log(args.level);
+                if (args.level == 6)
+                    consoleDiv.textContent = args.message;
+                else {
+                    consoleDiv.innerHTML = "";
+                    const errorTag = document.createElement("error");
+                    errorTag.textContent = args.message;
+                    consoleDiv.appendChild(errorTag);
+                }
             }
         }
     }

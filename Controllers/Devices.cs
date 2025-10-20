@@ -27,6 +27,7 @@ namespace DSRemapper.ServerApp.Controllers
                 remapper.IsConnected,
                 remapper.IsRunning,
                 remapper.CurrentProfile,
+                customActions = remapper.CustomActions.Select(ca => ca.Key),
                 config.AutoConnect,
                 config.LastProfile,
             };

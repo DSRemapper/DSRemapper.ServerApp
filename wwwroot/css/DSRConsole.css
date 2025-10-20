@@ -9,8 +9,8 @@
     white-space: break-spaces;
     overflow-wrap: break-word;
     padding: 3px 5px;
-    border-top: 1px solid #555;
-    border-bottom: 1px solid #555;
+    border-top: 1px solid var(--bg-tertiary);
+    border-bottom: 1px solid var(--bg-tertiary);
     border-radius: 5px;
 }
 

@@ -6,43 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DSRemapper</title>
     <base href="/" />
-    <script src="js/jsinterop.js"></script>
-    <link href="css/app.css" rel="stylesheet" />
-    <link href="WinFormsBlazor.styles.css" rel="stylesheet" />
+    <link rel="icon" href="/Images/DSRLogo.png" type="image/png">
     <link href="css/DSRInterface.css" rel="stylesheet" />
     <link href="css/DSRControllers.css" rel="stylesheet" />
     <link href="css/DSRPlugins.css" rel="stylesheet" />
     <link href="css/DSRAbout.css" rel="stylesheet" />
     <link href="css/DSRConsole.css" rel="stylesheet" />
+    <script src="js/signalr.min.js"></script>
+    <script src="js/DSRConsole.js"></script>
 </head>
 
-<body>
-
-    <div id="app">
-        <div id="subapp">
-            <nav id="nav-bar">
-                <button>Scroll to end</button>
-            </nav>
-            <div class="debug-console column-span2">
-            <trace>Test</trace>
-            <debug>Test</debug>
-            <information>Test</information>
-            <warning>Test</warning>
-            <error>Test</error>
-            <critical>Test</critical>
-            <none>Test</none>
-            </div>
-            <footer id="footer">Autoscroll</footer>
-            </div>
+<body id="app">
+    <nav id="nav-bar">
+        <button id="scroll-to-end">Scroll to end</button>
+    </nav>
+    <div id="console-view" class="debug-console column-span2">
+        <trace>Test</trace>
+        <debug>Test</debug>
+        <information>Test</information>
+        <warning>Test</warning>
+        <error>Test</error>
+        <critical>Test</critical>
+        <none>Test</none>
     </div>
-
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-
-    <script src="_framework/blazor.webview.js"></script>
+    <footer id="footer"><label><input type="checkbox" id="auto-scroll-check" checked>Auto Scroll</label></footer>
 </body>
 
 </html>

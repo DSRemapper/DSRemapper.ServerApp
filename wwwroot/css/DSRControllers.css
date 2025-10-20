@@ -1,5 +1,5 @@
 .ctrl-item {
-    background-color: #444;
+    background-color: var(--bg-secondary);
     border-radius: 10px;
     display: grid;
     grid-template-columns: 150px 1fr 150px;
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: row;
     grid-column-start: span 3;
-    border-bottom: #333 solid 1px;
+    border-bottom: var(--bg-primary) solid 1px;
     margin: 0px -5px;
     padding: 5px;
     gap: 5px;
@@ -66,14 +66,14 @@
 .ctrl-item .ctrl-profile-list {
     padding: 3px;
     width: 100%;
-    background-color: #3e3e3e;
-    color: #ddd;
-    border-color: #555;
+    background-color: var(--bg-input);
+    color: var(--font-input);
+    border-color: var(--bg-tertiary);
     border-radius: 5px;
 }
 
 .ctrl-item .ctrl-console {
-    background-color: #333;
+    background-color: var(--bg-primary);
     white-space: pre;
     padding: 5px;
     border-radius: 5px;

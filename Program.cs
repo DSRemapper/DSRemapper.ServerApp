@@ -42,7 +42,9 @@ namespace DSRemapper.ServerApp
             AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
             {
                 Exception? exception = (Exception?)e.ExceptionObject;
-                logger.LogCritical($"{sender?.GetType().FullName}: {exception?.Message}");
+                string msg = $"{sender?.GetType().FullName}: {exception?.Message}";
+                DSRLogger.StaticLogCritical(msg);
+                logger.LogCritical(msg);
             };
 
             PluginLoader.LoadPluginAssemblies();
@@ -109,10 +111,25 @@ namespace DSRemapper.ServerApp
                 if (timeSinceLastSend >= ThrottleInterval)
                 {
                     await dsrHubContext.Clients.Group($"ctrl-{id}").SendAsync("InputData", report);
-                    
+
                     LastSentTimes.TryUpdate(id, currentTime, lastSendTime);
                 }
             };
+
+            int lastLogCount = 0;
+            var logTimer = new Timer(async _ =>
+            {
+                if (dsrHubContext != null)
+                {
+                    var currentLogCount = DSRLogger.Entries.Count;
+                    if (currentLogCount > lastLogCount)
+                    {
+                        var logsToSend = DSRLogger.Entries[lastLogCount..currentLogCount].Select(log => new { log.logLevel, log.eventId, log.category, log.message });//.GetRange(lastLogCount, currentLogCount - lastLogCount);
+                        await dsrHubContext.Clients.Group("ConsolePage").SendAsync("LogEvents", logsToSend);
+                        lastLogCount = currentLogCount;
+                    }
+                }
+            }, null, TimeSpan.Zero, TimeSpan.FromMilliseconds(100));
 
             RemapperCore.StartScanner();
             app.Run("http://*:5100");
