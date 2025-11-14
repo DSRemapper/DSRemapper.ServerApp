@@ -26,6 +26,9 @@
 		},
 		{
 			"path": "../DSRemapper.MouseKeyboardOutput"
+		},
+		{
+			"path": "../DSRemapper.MKLinuxOutput"
 		}
 	],
 	"settings": {}
