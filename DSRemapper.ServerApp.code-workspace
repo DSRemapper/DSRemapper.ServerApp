@@ -10,9 +10,6 @@
 			"path": "../DSRemapper.Core"
 		},
 		{
-			"path": "../DSRemapperApp"
-		},
-		{
 			"path": "../DSRemapper.DualShock"
 		},
 		{
@@ -29,6 +26,18 @@
 		},
 		{
 			"path": "../DSRemapper.MKLinuxOutput"
+		},
+		{
+			"path": "../DSRemapper.VJoy"
+		},
+		{
+			"path": "../DSRemapper.ViGEm"
+		},
+		{
+			"path": "../DSRemapper.DirectInput"
+		},
+		{
+			"path": "../DSRemapper.COMM"
 		}
 	],
 	"settings": {}
