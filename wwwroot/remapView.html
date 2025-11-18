@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSRemapper</title>
+    <base href="/" />
+    <link href="css/DSRInterface.css" rel="stylesheet" />
+    <link href="css/DSRControllers.css" rel="stylesheet" />
+    <link href="css/DSRPlugins.css" rel="stylesheet" />
+    <link href="css/DSRRemapView.css" rel="stylesheet" />
+    <script src="js/signalr.min.js"></script>
+    <script src="js/DSRRemapView.js"></script>
+</head>
+
+<body id="app">
+    <nav id="nav-bar">NavBar</nav>
+    <div id="main-view" class="column-span2">
+        <div id="remap-view">
+            <div class="remap-item" id="output-device-selector">
+                <span class="name">Output Device</span>
+                <select id="output-device-list"></select>
+            </div>
+            <div id="remap-list">
+                <!-- Remap items will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+    <footer id="footer">Footer</footer>
+    <template id="remap-item-template">
+        <div class="remap-item">
+            <div class="remap-input">
+                <span class="name">@InputName</span>
+                <svg width="100px" height="15">
+                    <rect class="indicator-bg" x="0" y="0" width="100" height="15" rx="3" ry="3" fill="#282828"></rect>
+                    <rect class="indicator" x="0" y="0" width="0" height="15" rx="3" ry="3" fill="#aaa"></rect>
+                </svg>
+                <span class="value"></span>
+            </div>
+            <div class="remap-output">
+                <select class="output-selector"></select>
+            </div>
+        </div>
+    </template>
+</body>
+
+</html>

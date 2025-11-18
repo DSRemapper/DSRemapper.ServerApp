@@ -40,5 +40,7 @@
 			"path": "../DSRemapper.COMM"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"CodeGPT.apiKey": "Gemini CLI"
+	}
 }
