@@ -38,9 +38,12 @@
 		},
 		{
 			"path": "../DSRemapper.COMM"
+		},
+		{
+			"path": "../DSRPackager"
 		}
 	],
 	"settings": {
-		"CodeGPT.apiKey": "Gemini CLI"
+		"CodeGPT.apiKey": "Ollama"
 	}
 }

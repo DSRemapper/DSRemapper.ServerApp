@@ -80,7 +80,10 @@ connection.on("InputData",function (report){
             axisItem.id = `axis-${i}`;
             axisItem.querySelector('svg rect:first-child').setAttribute('fill', disableColor);
             axisItem.querySelector('svg rect:nth-child(2)').setAttribute('fill', enableColor);
-            clone.querySelector('span.name').innerHTML = `Axis ${i}<br>${axisAlias[i].join(" - ")}`;
+            if (i < axisAlias.length)
+                clone.querySelector('span.name').innerHTML = `Axis ${i}<br>${axisAlias[i].join(" - ")}`;
+            else
+                clone.querySelector('span.name').innerHTML = `Axis ${i}`;
             testView.appendChild(clone);
         }
         for(let i = 0; i < report.sliders.length; i++){
@@ -102,10 +105,14 @@ connection.on("InputData",function (report){
         for(let i = 0; i < report.buttons.length; i++){
             const clone = buttonTile.content.cloneNode(true);
             const buttonItem = clone.querySelector('.button-item');
-            clone.querySelector('span.name').innerHTML = `Button ${i}<br>${buttonAlias[i].join(" - ")}`;
+            if (i < buttonAlias.length)
+                clone.querySelector('span.name').innerHTML = `Button ${i}<br>${buttonAlias[i].join(" - ")}`;
+            else
+                clone.querySelector('span.name').innerHTML = `Button ${i}`;
             buttonItem.id = `button-${i}`;
             testView.appendChild(clone);
         }
+        console.log(report.sixAxes.length);
         for(let i = 0; i < report.sixAxes.length; i++){
             const clone = sixTile.content.cloneNode(true);
             const sixItem = clone.querySelector('.six-item');
@@ -116,7 +123,10 @@ connection.on("InputData",function (report){
             sixItem.querySelectorAll('svg rect:nth-child(2)').forEach(rect => {
                 rect.setAttribute('fill', enableColor);
             });
-            clone.querySelector('span.name').innerHTML = `SixAxis ${i}<br>${sixAxisAlias[i].join(" - ")}`;
+            if (i < sixAxisAlias.length)
+                clone.querySelector('span.name').innerHTML = `SixAxis ${i}<br>${sixAxisAlias[i].join(" - ")}`;
+            else
+                clone.querySelector('span.name').innerHTML = `SixAxis ${i}`;
             testView.appendChild(clone);
         }
         for(let i = 0; i < report.quaternions.length; i++){
@@ -129,7 +139,10 @@ connection.on("InputData",function (report){
             quatItem.querySelectorAll('svg rect:nth-child(2)').forEach(rect => {
                 rect.setAttribute('fill', enableColor);
             });
-            clone.querySelector('span.name').innerHTML = `Quaternion ${i}<br>${quaternionAlias[i].join(" - ")}`;
+            if (i < quaternionAlias.length)
+                clone.querySelector('span.name').innerHTML = `Quaternion ${i}<br>${quaternionAlias[i].join(" - ")}`;
+            else
+                clone.querySelector('span.name').innerHTML = `Quaternion ${i}`;
             testView.appendChild(clone);
         }
         for(let i = 0; i < report.touch.length; i++){

@@ -15,9 +15,8 @@
   <ItemGroup>
     <None Update="wwwroot\**/*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>  
-    <ProjectReference Include="..\DSRemapper.Core\DSRemapper.Core.csproj" />
-    <ProjectReference Include="..\DSRemapper.Framework\DSRemapper.Framework.csproj" />
+    </None>
+    <PackageReference Include="DSRemapper.Framework" Version="0.2.2" />
   </ItemGroup>
 
   <ItemGroup>

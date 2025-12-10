@@ -6,6 +6,7 @@
     grid-auto-rows: 170px;
     grid-gap: 5px;
     padding: 5px;
+    overflow: auto;
 }
 #input-test-view > * {
     display: grid;

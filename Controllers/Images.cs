@@ -17,14 +17,15 @@ namespace DSRemapper.ServerApp.Controllers
             Ok(PluginLoader.ControllerImages);
 
         [HttpGet("raw/{*id}")]
-        public ActionResult<byte[]> GetImageById(string id)
-        {
-            Console.WriteLine($"============== Image Path: {id}");
-            return PluginLoader.ControllerImages.TryGetValue(id, out byte[]? val) ? File(val, "image/png") : Redirect("/Images/UnknownController.png");
-        }
+        public ActionResult<byte[]> GetImageById(string id) =>
+            PluginLoader.ControllerImages.TryGetValue(id, out byte[]? val) ?
+                File(val, "image/png") :
+                Redirect("/Images/UnknownController.png");
 
         [HttpGet("base64/{*id}")]
         public ActionResult GetImageByIdBase64(string id) =>
-            PluginLoader.ControllerImages.TryGetValue(id, out byte[]? val) ? Ok(Convert.ToBase64String(val)) : NotFound();
+            PluginLoader.ControllerImages.TryGetValue(id, out byte[]? val) ?
+                Ok(Convert.ToBase64String(val)) :
+                NotFound();
     }
 }
