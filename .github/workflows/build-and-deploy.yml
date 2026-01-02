@@ -10,7 +10,7 @@ on:
 env:
   IS_CI_BUILD: true
   DSRPACKAGER_EXE: 'DSRPackager'
-  ZIPPER_FOLDER_NAME: '.'
+  ZIPPER_FOLDER_NAME: './'
 
 jobs:
   build-and-pack:
@@ -49,10 +49,10 @@ jobs:
         uses: robinraju/release-downloader@v1.9
         with:
           repository: 'DSRemapper/DSRPackager'
-          tag: 'latest'
+          latest: true
           fileName: ${{ env.DSRPACKAGER_EXE }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          targetDir: ${{ env.ZIPPER_FOLDER_NAME }}
+          out-file-path: ${{ env.ZIPPER_FOLDER_NAME }}
 
       - name: Make Zipper Executable
         run: chmod +x ./${{ env.DSRPACKAGER_EXE }}
