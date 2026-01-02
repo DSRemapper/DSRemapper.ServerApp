@@ -70,6 +70,7 @@ jobs:
           DSR_GPG_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
           DSR_GPG_PASS: ${{ secrets.GPG_PASSPHRASE }}
         run: |
+          sudo chmod -R 777 ./build
           ./${{ env.DSRPACKAGER_EXE }} -p "./build/win-x64" \
             -n "DSRemapper.ServerApp.app" \
             -d "Official client for the DSRemapper Framework. It provides a RESTful API and a simple static server for the UI." \
@@ -82,12 +83,20 @@ jobs:
           DSR_GPG_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
           DSR_GPG_PASS: ${{ secrets.GPG_PASSPHRASE }}
         run: |
+          sudo chmod -R 777 ./build
           ./${{ env.DSRPACKAGER_EXE }} -p "./build/linux-x64" \
             -n "DSRemapper.ServerApp.app" \
             -d "Official client for the DSRemapper Framework. It provides a RESTful API and a simple static server for the UI." \
             -o "./DSRemapper.ServerApp.linux-x64.zip" \
             -a -l "linux:https://github.com/DSRemapper/DSRemapper.ServerApp/releases/download/${{ github.ref_name }}/DSRemapper.ServerApp.linux-x64.zip" \
             -s
+
+      - name: Verify DSRPackager output
+        run: |
+          if [ ! -f "./DSRemapper.ServerApp.win-x64.zip" ]; then
+            echo "::error::Package was not created! Check the logs for Access Denied errors."
+            exit 1
+          fi
 
       - name: Create GitHub Release
         id: create_release
@@ -103,6 +112,7 @@ jobs:
       - name: Sync Updated Manifest
         run: |
           cp ./manifest.json ./pages-content/manifest.json -f
+          cp ./manifest.json.asc ./pages-content/manifest.json.asc -f
 
       - name: Commit and Push to Distribution
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -110,6 +120,6 @@ jobs:
           repository: ./pages-content
           branch: gh-pages
           commit_message: "update manifest for ${{ steps.version_extract.outputs.FULL_VERSION }}"
-          file_pattern: 'manifest.json'
+          file_pattern: 'manifest.json manifest.json.asc'
           commit_user_name: github-actions[bot]
           commit_user_email: github-actions[bot]@users.noreply.github.com
