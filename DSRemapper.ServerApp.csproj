@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="manifest.json" />
     <None Update="wwwroot\**/*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
