@@ -30,7 +30,7 @@ jobs:
 
       - name: Prepare Manifest for Update
         run: |
-          cp ./pages-content/manifest.json ./manifest.json -f
+          [ -f "./pages-content/manifest.json" ] && cp ./pages-content/manifest.json ./manifest.json -f || echo "No manifest.json found in distribution branch, skipping copy."
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
