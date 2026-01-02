@@ -19,7 +19,7 @@
     <None Update="wwwroot\**/*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <PackageReference Include="DSRemapper.Framework" Version="0.2.2" />
+    <PackageReference Include="DSRemapper.Framework" Version="0.2.3" />
   </ItemGroup>
 
   <ItemGroup>
