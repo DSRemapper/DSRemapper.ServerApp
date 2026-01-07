@@ -1,0 +1,63 @@
+[2026-01-07 15:31:37.644] Information: [DSRemapper.PluginLoader (0)] Scanning file: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DirectInput v0.2.0.dsrp
+[2026-01-07 15:31:37.665] Information: [DSRemapper.PluginLoader (0)] Plugin found: DSRemapper.DirectInput (0.1.1.0, Core: 0.4.10.0, Framework: , Platform: ALL)
+[2026-01-07 15:31:37.665] Information: [DSRemapper.PluginLoader (0)] Scanning file: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp
+[2026-01-07 15:31:37.666] Information: [DSRemapper.PluginLoader (0)] Plugin found: DSRemapper.DualShock (0.3.2.0, Core: 0.4.10.0, Framework: , Platform: ALL)
+[2026-01-07 15:31:37.666] Information: [DSRemapper.PluginLoader (0)] Scanning file: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.LuaRemapper v0.3.2.dsrp
+[2026-01-07 15:31:37.666] Information: [DSRemapper.PluginLoader (0)] Plugin found: DSRemapper.LuaRemapper (0.3.2.0, Core: 0.4.10.0, Framework: , Platform: ALL)
+[2026-01-07 15:31:37.666] Information: [DSRemapper.PluginLoader (0)] Scanning file: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.ViGEm v0.2.2.dsrp
+[2026-01-07 15:31:37.677] Information: [DSRemapper.PluginLoader (0)] Plugin found: DSRemapper.ViGEm (0.2.2.0, Core: 0.4.10.0, Framework: , Platform: ALL)
+[2026-01-07 15:31:37.677] Information: [DSRemapper.PluginLoader (0)] Scanning file: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.VJoy v0.2.2.dsrp
+[2026-01-07 15:31:37.678] Information: [DSRemapper.PluginLoader (0)] Plugin found: DSRemapper.VJoy (0.2.2.0, Core: 0.4.10.0, Framework: , Platform: ALL)
+[2026-01-07 15:31:37.683] Information: [DSRemapper.PluginLoader (0)] Controller image found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DirectInput v0.2.0.dsrp/DirectInput.png
+[2026-01-07 15:31:37.696] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DirectInput v0.2.0.dsrp/DSRemapper.DirectInput.dll
+[2026-01-07 15:31:37.698] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DirectInput v0.2.0.dsrp/SharpDX.DirectInput.dll
+[2026-01-07 15:31:37.701] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DirectInput v0.2.0.dsrp/SharpDX.dll
+[2026-01-07 15:31:37.703] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DirectInput v0.2.0.dsrp/System.Diagnostics.DiagnosticSource.dll
+[2026-01-07 15:31:37.703] Information: [DSRemapper.PluginLoader (0)] Plugin loaded: DSRemapper.DirectInput (Version: 0.1.1.0, Core: 0.4.10.0, Framework: )
+[2026-01-07 15:31:37.704] Information: [DSRemapper.PluginLoader (0)] Controller image found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/DS4.png
+[2026-01-07 15:31:37.704] Information: [DSRemapper.PluginLoader (0)] Controller image found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/DS5.png
+[2026-01-07 15:31:37.705] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/DSRemapper.DualShock.dll
+[2026-01-07 15:31:37.706] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/DSRemapper.DualShockStructs.dll
+[2026-01-07 15:31:37.706] Information: [DSRemapper.PluginLoader (0)] Native dll found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/hidapi.ndll
+[2026-01-07 15:31:37.706] Information: [DSRemapper.PluginLoader (0)] Native dll currently installed: G:\DSR Projects\DSRemapper.ServerApp\hidapi.dll
+[2026-01-07 15:31:37.707] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/HidApi.Net.dll
+[2026-01-07 15:31:37.709] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/System.CodeDom.dll
+[2026-01-07 15:31:37.710] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/System.IO.Hashing.dll
+[2026-01-07 15:31:37.712] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/System.Management.dll
+[2026-01-07 15:31:37.713] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/WCharT.Net.dll
+[2026-01-07 15:31:37.713] Information: [DSRemapper.PluginLoader (0)] Plugin loaded: DSRemapper.DualShock (Version: 0.3.2.0, Core: 0.4.10.0, Framework: )
+[2026-01-07 15:31:37.714] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.LuaRemapper v0.3.2.dsrp/DSRemapper.LuaRemapper.dll
+[2026-01-07 15:31:37.717] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.LuaRemapper v0.3.2.dsrp/MoonSharp.Interpreter.dll
+[2026-01-07 15:31:37.718] Information: [DSRemapper.PluginLoader (0)] Plugin loaded: DSRemapper.LuaRemapper (Version: 0.3.2.0, Core: 0.4.10.0, Framework: )
+[2026-01-07 15:31:37.719] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.ViGEm v0.2.2.dsrp/DSRemapper.DualShockStructs.dll
+[2026-01-07 15:31:37.752] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.ViGEm v0.2.2.dsrp/DSRemapper.ViGEm.dll
+[2026-01-07 15:31:37.755] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.ViGEm v0.2.2.dsrp/Nefarius.ViGEm.Client.dll
+[2026-01-07 15:31:37.755] Information: [DSRemapper.PluginLoader (0)] Plugin loaded: DSRemapper.ViGEm (Version: 0.2.2.0, Core: 0.4.10.0, Framework: )
+[2026-01-07 15:31:37.756] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.VJoy v0.2.2.dsrp/DSRemapper.VJoy.dll
+[2026-01-07 15:31:37.756] Information: [DSRemapper.PluginLoader (0)] Native dll found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.VJoy v0.2.2.dsrp/vJoyInterface.ndll
+[2026-01-07 15:31:37.756] Information: [DSRemapper.PluginLoader (0)] Native dll currently installed: G:\DSR Projects\DSRemapper.ServerApp\vJoyInterface.dll
+[2026-01-07 15:31:37.756] Information: [DSRemapper.PluginLoader (0)] Plugin loaded: DSRemapper.VJoy (Version: 0.2.2.0, Core: 0.4.10.0, Framework: )
+[2026-01-07 15:31:37.758] Information: [DSRemapper.PluginLoader (0)] Scanner plugin found: DSRemapper.DirectInput.DIScanner
+[2026-01-07 15:31:37.771] Information: [DSRemapper.PluginLoader (0)] Scanner plugin found: DSRemapper.DualShock.DualShockScanner
+[2026-01-07 15:31:37.777] Information: [DSRemapper.PluginLoader (0)] Remapper plugin for ".lua" files found: DSRemapper.LuaRemapper.LuaInterpreter
+[2026-01-07 15:31:37.777] Information: [DSRemapper.PluginLoader (0)] Remapper plugin for ".slua" files found: DSRemapper.LuaRemapper.LuaInterpreter
+[2026-01-07 15:31:37.781] Information: [DSRemapper.PluginLoader (0)] Output plugin found: DSRemapper.ViGEm.DS4
+[2026-01-07 15:31:37.781] Information: [DSRemapper.PluginLoader (0)] Output plugin found: DSRemapper.ViGEm.Xbox
+[2026-01-07 15:31:37.783] Information: [DSRemapper.PluginLoader (0)] Output plugin found: DSRemapper.VJoyCtrl.VJoyCtrl
+[2026-01-07 15:31:38.163] Information: [DSRemapper.Dualsense (0)] DualSense [14:3A:9A:B8:20:34]: Connected using USB
+[2026-01-07 15:31:38.223] Information: [DSRemapper.Dualshock (0)] DualShock 4 [40:1B:5F:D6:AB:0F]: Connected using USB
+[2026-01-07 15:31:38.225] Information: [DSRempper.RemapperCore (0)] Physical device plugged: DualSense [14:3A:9A:B8:20:34]
+[2026-01-07 15:31:38.345] Information: [HidApi (0)] Windows OS detected, setting input buffer count
+[2026-01-07 15:31:38.346] Information: [DSRemapper.Dualsense (0)] DualSense [14:3A:9A:B8:20:34]: buffer count set to 3
+[2026-01-07 15:31:38.362] Information: [DSRempper.RemapperCore (0)] Physical device plugged: DualShock 4 [40:1B:5F:D6:AB:0F]
+[2026-01-07 15:31:38.377] Information: [HidApi (0)] Windows OS detected, setting input buffer count
+[2026-01-07 15:31:38.378] Information: [DSRemapper.Dualshock (0)] DualShock 4 [40:1B:5F:D6:AB:0F]: buffer count set to 3
+[2026-01-07 15:31:39.944] Information: [DSRemapper.Dualsense (0)] DualSense [14:3A:9A:B8:20:34]: Connected using USB
+[2026-01-07 15:31:39.944] Information: [DSRemapper.Dualshock (0)] DualShock 4 [C0:13:37:AB:1B:A7]: Connected using USB
+[2026-01-07 15:31:39.944] Information: [DSRemapper.Dualshock (0)] DualShock 4 [40:1B:5F:D6:AB:0F]: Connected using USB
+[2026-01-07 15:31:39.944] Information: [DSRempper.RemapperCore (0)] Physical device plugged: Controller (XBOX 360 For Windows) [14dac850-676e-11ee-8001-444553540000]
+[2026-01-07 15:31:39.945] Information: [DSRempper.RemapperCore (0)] Physical device plugged: DualShock 4 [C0:13:37:AB:1B:A7]
+[2026-01-07 15:32:46.274] Information: [DSRemapper.Dualsense (0)] DualSense [14:3A:9A:B8:20:34]: Connected using USB
+[2026-01-07 15:32:46.275] Information: [DSRemapper.Dualshock (0)] DualShock 4 [40:1B:5F:D6:AB:0F]: Connected using USB
+[2026-01-07 15:32:46.275] Information: [DSRempper.RemapperCore (0)] Physical device unpluged: DualShock 4 [C0:13:37:AB:1B:A7]
+[2026-01-07 15:32:46.275] Information: [DSRempper.RemapperCore (0)] Physical device plugged: Controller (XBOX 360 For Windows) [eda6cb00-c111-11ee-8001-444553540000]

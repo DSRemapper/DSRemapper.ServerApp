@@ -1,4 +1,5 @@
 using DSRemapper.Core;
+using DSRemapper.Core.CDN;
 using DSRemapper.Framework;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,8 +10,8 @@ namespace DSRemapper.ServerApp.Controllers
     public class PluginsController : ControllerBase
     {
         [HttpGet]
-        public ActionResult<IEnumerable<string>> GetPluginFiles() =>
-            Ok(PluginLoader.GetPluginFiles());
+        public ActionResult<IEnumerable<string>> GetPlugins() =>
+            Ok(PluginLoader.GetPluginFiles.Select(f => f.FullName));
         [HttpGet("input")]
         public ActionResult<IEnumerable<string>> GetInputPlugins() =>
             Ok(PluginLoader.Scanners.Keys);
@@ -20,7 +21,13 @@ namespace DSRemapper.ServerApp.Controllers
             Ok(PluginLoader.OutputPlugins.Keys);
 
         [HttpGet("remapper")]
-        public ActionResult<IEnumerable<string>> GetORemapperPlugins() =>
+        public ActionResult<IEnumerable<string>> GetRemapperPlugins() =>
             Ok(PluginLoader.RemapperPlugins.Keys);
+        [HttpGet("core")]
+        public ActionResult<IEnumerable<Version>> GetCoreVersion() =>
+            Ok(PluginLoader.CoreVersion);
+        [HttpGet("framework")]
+        public ActionResult<IEnumerable<Version>> GetFrameworkVersion() =>
+            Ok(PluginLoader.FrameworkVersion);
     }
 }

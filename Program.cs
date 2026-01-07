@@ -14,8 +14,6 @@ namespace DSRemapper.ServerApp
 {
     internal class Program
     {
-        private static readonly ConcurrentDictionary<string, DateTimeOffset> LastSentTimes = new();
-        private static readonly TimeSpan ThrottleInterval = TimeSpan.FromSeconds(1/20);
         static void Main(string[] args)
         {
             IHubContext<DSRHub>? dsrHubContext = null;
@@ -47,6 +45,7 @@ namespace DSRemapper.ServerApp
                 logger.LogCritical(msg);
             };
 
+            PluginLoader.RegisterPlugins();
             PluginLoader.LoadPluginAssemblies();
             PluginLoader.LoadPlugins();
             logger.LogInformation("DSRemapper Framework loaded.");
@@ -105,15 +104,7 @@ namespace DSRemapper.ServerApp
             };
             Remapper.OnGlobalRead += async (id, report) =>
             {
-                var currentTime = DateTimeOffset.UtcNow;
-                DateTimeOffset lastSendTime = LastSentTimes.GetOrAdd(id, currentTime);
-                var timeSinceLastSend = currentTime - lastSendTime;
-                if (timeSinceLastSend >= ThrottleInterval)
-                {
-                    await dsrHubContext.Clients.Group($"ctrl-{id}").SendAsync("InputData", report);
-
-                    LastSentTimes.TryUpdate(id, currentTime, lastSendTime);
-                }
+                await dsrHubContext.Clients.Group($"ctrl-{id}").SendAsync("InputData", report);
             };
 
             int lastLogCount = 0;
@@ -124,7 +115,7 @@ namespace DSRemapper.ServerApp
                     var currentLogCount = DSRLogger.Entries.Count;
                     if (currentLogCount > lastLogCount)
                     {
-                        var logsToSend = DSRLogger.Entries[lastLogCount..currentLogCount].Select(log => new { log.logLevel, log.eventId, log.category, log.message });//.GetRange(lastLogCount, currentLogCount - lastLogCount);
+                        var logsToSend = DSRLogger.Entries[lastLogCount..currentLogCount].Select(log => new { log.logLevel, log.eventId, log.category, log.message });
                         await dsrHubContext.Clients.Group("ConsolePage").SendAsync("LogEvents", logsToSend);
                         lastLogCount = currentLogCount;
                     }

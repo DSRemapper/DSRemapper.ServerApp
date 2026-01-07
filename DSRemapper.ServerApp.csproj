@@ -12,23 +12,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="DSR.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Content Include="DSR.ico"/>
     <None Remove="manifest.json" />
+    <PackageReference Include="DSRemapper.Framework" Version="0.3.0" />
+    
     <None Update="wwwroot\**/*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <PackageReference Include="DSRemapper.Framework" Version="0.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Update="wwwroot\Images\DSRLogo.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>
+          PreserveNewest
+      </CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\Images\UnknownController.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToOutputDirectory>
+            PreserveNewest
+        </CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 

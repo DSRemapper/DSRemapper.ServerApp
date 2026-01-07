@@ -1,0 +1,93 @@
+[2026-01-07 15:23:00.641] Information: [DSRemapper.PluginLoader (0)] Scanning file: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DirectInput v0.2.0.dsrp
+[2026-01-07 15:23:00.661] Information: [DSRemapper.PluginLoader (0)] Plugin found: DSRemapper.DirectInput (0.1.1.0, Core: 0.4.10.0, Framework: , Platform: ALL)
+[2026-01-07 15:23:00.661] Information: [DSRemapper.PluginLoader (0)] Scanning file: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp
+[2026-01-07 15:23:00.673] Information: [DSRemapper.PluginLoader (0)] Plugin found: DSRemapper.DualShock (0.3.2.0, Core: 0.4.10.0, Framework: , Platform: ALL)
+[2026-01-07 15:23:00.678] Information: [DSRemapper.PluginLoader (0)] Scanning file: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.LuaRemapper v0.3.2.dsrp
+[2026-01-07 15:23:00.678] Information: [DSRemapper.PluginLoader (0)] Plugin found: DSRemapper.LuaRemapper (0.3.2.0, Core: 0.4.10.0, Framework: , Platform: ALL)
+[2026-01-07 15:23:00.678] Information: [DSRemapper.PluginLoader (0)] Scanning file: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.ViGEm v0.2.2.dsrp
+[2026-01-07 15:23:00.679] Information: [DSRemapper.PluginLoader (0)] Plugin found: DSRemapper.ViGEm (0.2.2.0, Core: 0.4.10.0, Framework: , Platform: ALL)
+[2026-01-07 15:23:00.679] Information: [DSRemapper.PluginLoader (0)] Scanning file: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.VJoy v0.2.2.dsrp
+[2026-01-07 15:23:00.679] Information: [DSRemapper.PluginLoader (0)] Plugin found: DSRemapper.VJoy (0.2.2.0, Core: 0.4.10.0, Framework: , Platform: ALL)
+[2026-01-07 15:23:00.684] Information: [DSRemapper.PluginLoader (0)] Controller image found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DirectInput v0.2.0.dsrp/DirectInput.png
+[2026-01-07 15:23:00.697] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DirectInput v0.2.0.dsrp/DSRemapper.DirectInput.dll
+[2026-01-07 15:23:00.699] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DirectInput v0.2.0.dsrp/SharpDX.DirectInput.dll
+[2026-01-07 15:23:00.702] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DirectInput v0.2.0.dsrp/SharpDX.dll
+[2026-01-07 15:23:00.704] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DirectInput v0.2.0.dsrp/System.Diagnostics.DiagnosticSource.dll
+[2026-01-07 15:23:00.704] Information: [DSRemapper.PluginLoader (0)] Plugin loaded: DSRemapper.DirectInput (Version: 0.1.1.0, Core: 0.4.10.0, Framework: )
+[2026-01-07 15:23:00.705] Information: [DSRemapper.PluginLoader (0)] Controller image found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/DS4.png
+[2026-01-07 15:23:00.705] Information: [DSRemapper.PluginLoader (0)] Controller image found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/DS5.png
+[2026-01-07 15:23:00.759] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/DSRemapper.DualShock.dll
+[2026-01-07 15:23:00.761] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/DSRemapper.DualShockStructs.dll
+[2026-01-07 15:23:00.761] Information: [DSRemapper.PluginLoader (0)] Native dll found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/hidapi.ndll
+[2026-01-07 15:23:00.761] Information: [DSRemapper.PluginLoader (0)] Native dll currently installed: G:\DSR Projects\DSRemapper.ServerApp\hidapi.dll
+[2026-01-07 15:23:00.762] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/HidApi.Net.dll
+[2026-01-07 15:23:00.764] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/System.CodeDom.dll
+[2026-01-07 15:23:00.765] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/System.IO.Hashing.dll
+[2026-01-07 15:23:00.767] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/System.Management.dll
+[2026-01-07 15:23:00.768] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.DualShock v0.3.2.dsrp/WCharT.Net.dll
+[2026-01-07 15:23:00.768] Information: [DSRemapper.PluginLoader (0)] Plugin loaded: DSRemapper.DualShock (Version: 0.3.2.0, Core: 0.4.10.0, Framework: )
+[2026-01-07 15:23:00.768] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.LuaRemapper v0.3.2.dsrp/DSRemapper.LuaRemapper.dll
+[2026-01-07 15:23:00.771] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.LuaRemapper v0.3.2.dsrp/MoonSharp.Interpreter.dll
+[2026-01-07 15:23:00.771] Information: [DSRemapper.PluginLoader (0)] Plugin loaded: DSRemapper.LuaRemapper (Version: 0.3.2.0, Core: 0.4.10.0, Framework: )
+[2026-01-07 15:23:00.772] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.ViGEm v0.2.2.dsrp/DSRemapper.DualShockStructs.dll
+[2026-01-07 15:23:00.773] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.ViGEm v0.2.2.dsrp/DSRemapper.ViGEm.dll
+[2026-01-07 15:23:00.775] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.ViGEm v0.2.2.dsrp/Nefarius.ViGEm.Client.dll
+[2026-01-07 15:23:00.776] Information: [DSRemapper.PluginLoader (0)] Plugin loaded: DSRemapper.ViGEm (Version: 0.2.2.0, Core: 0.4.10.0, Framework: )
+[2026-01-07 15:23:00.776] Information: [DSRemapper.PluginLoader (0)] Assembly found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.VJoy v0.2.2.dsrp/DSRemapper.VJoy.dll
+[2026-01-07 15:23:00.777] Information: [DSRemapper.PluginLoader (0)] Native dll found: G:\DSR Projects\DSRemapper.ServerApp\bin\Release\net8.0\Plugins\DSRemapper.VJoy v0.2.2.dsrp/vJoyInterface.ndll
+[2026-01-07 15:23:00.777] Information: [DSRemapper.PluginLoader (0)] Native dll currently installed: G:\DSR Projects\DSRemapper.ServerApp\vJoyInterface.dll
+[2026-01-07 15:23:00.777] Information: [DSRemapper.PluginLoader (0)] Plugin loaded: DSRemapper.VJoy (Version: 0.2.2.0, Core: 0.4.10.0, Framework: )
+[2026-01-07 15:23:00.779] Information: [DSRemapper.PluginLoader (0)] Scanner plugin found: DSRemapper.DirectInput.DIScanner
+[2026-01-07 15:23:00.790] Information: [DSRemapper.PluginLoader (0)] Scanner plugin found: DSRemapper.DualShock.DualShockScanner
+[2026-01-07 15:23:00.795] Information: [DSRemapper.PluginLoader (0)] Remapper plugin for ".lua" files found: DSRemapper.LuaRemapper.LuaInterpreter
+[2026-01-07 15:23:00.796] Information: [DSRemapper.PluginLoader (0)] Remapper plugin for ".slua" files found: DSRemapper.LuaRemapper.LuaInterpreter
+[2026-01-07 15:23:00.799] Information: [DSRemapper.PluginLoader (0)] Output plugin found: DSRemapper.ViGEm.DS4
+[2026-01-07 15:23:00.799] Information: [DSRemapper.PluginLoader (0)] Output plugin found: DSRemapper.ViGEm.Xbox
+[2026-01-07 15:23:00.801] Information: [DSRemapper.PluginLoader (0)] Output plugin found: DSRemapper.VJoyCtrl.VJoyCtrl
+[2026-01-07 15:23:01.155] Information: [DSRemapper.Dualsense (0)] DualSense [14:3A:9A:B8:20:34]: Connected using USB
+[2026-01-07 15:23:01.155] Information: [DSRempper.RemapperCore (0)] Physical device plugged: DualSense [14:3A:9A:B8:20:34]
+[2026-01-07 15:23:01.278] Information: [HidApi (0)] Windows OS detected, setting input buffer count
+[2026-01-07 15:23:01.279] Information: [DSRemapper.Dualsense (0)] DualSense [14:3A:9A:B8:20:34]: buffer count set to 3
+[2026-01-07 15:23:02.582] Information: [DSRemapper.Dualsense (0)] DualSense [14:3A:9A:B8:20:34]: Connected using USB
+[2026-01-07 15:23:02.582] Information: [DSRemapper.Dualshock (0)] DualShock 4 [C0:13:37:AB:1B:A7]: Connected using USB
+[2026-01-07 15:23:02.583] Information: [DSRempper.RemapperCore (0)] Physical device plugged: DualShock 4 [C0:13:37:AB:1B:A7]
+[2026-01-07 15:23:28.963] Error: [DSRempper.Remapper(DualSense,14:3A:9A:B8:20:34) (0)] System.Private.CoreLib[Void ConvertSpaceToNative(IntPtr, System.Object ByRef, IntPtr)](System.ArgumentException):
+Type could not be marshaled because the length of an embedded array instance does not match the declared length in the layout.
+   at System.StubHelpers.MngdFixedArrayMarshaler.ConvertSpaceToNative(IntPtr pMarshalState, Object& pManagedHome, IntPtr pNativeHome)
+--- End of stack trace from previous location ---
+   at System.Runtime.InteropServices.Marshal.StructureToPtr(Object structure, IntPtr ptr, Boolean fDeleteOld)
+   at System.Runtime.InteropServices.Marshal.StructureToPtr[T](T structure, IntPtr ptr, Boolean fDeleteOld)
+   at DSRemapper.DualShock.USBStatus.ToArray()
+   at DSRemapper.ViGEm.DS4.Update()
+   at MoonSharp.Interpreter.Interop.MethodMemberDescriptor.Execute(Script script, Object obj, ScriptExecutionContext context, CallbackArguments args)
+   at MoonSharp.Interpreter.Interop.OverloadedMethodMemberDescriptor.PerformOverloadedCall(Script script, Object obj, ScriptExecutionContext context, CallbackArguments args)
+   at MoonSharp.Interpreter.Interop.OverloadedMethodMemberDescriptor.<>c__DisplayClass33_0.<GetCallback>b__0(ScriptExecutionContext context, CallbackArguments args)
+   at MoonSharp.Interpreter.Execution.VM.Processor.Internal_ExecCall(Int32 argsCount, Int32 instructionPtr, CallbackFunction handler, CallbackFunction continuation, Boolean thisCall, String debugText, DynValue unwindHandler)
+   at MoonSharp.Interpreter.Execution.VM.Processor.Processing_Loop(Int32 instructionPtr)
+   at MoonSharp.Interpreter.Execution.VM.Processor.Call(DynValue function, DynValue[] args)
+   at DSRemapper.LuaRemapper.LuaInterpreter.Remap(IDSRInputReport report, Double deltaTime)
+[2026-01-07 15:23:42.261] Error: [DSRempper.Remapper(DualSense,14:3A:9A:B8:20:34) (0)] System.Private.CoreLib[Void ConvertSpaceToNative(IntPtr, System.Object ByRef, IntPtr)](System.ArgumentException):
+Type could not be marshaled because the length of an embedded array instance does not match the declared length in the layout.
+   at System.StubHelpers.MngdFixedArrayMarshaler.ConvertSpaceToNative(IntPtr pMarshalState, Object& pManagedHome, IntPtr pNativeHome)
+--- End of stack trace from previous location ---
+   at System.Runtime.InteropServices.Marshal.StructureToPtr(Object structure, IntPtr ptr, Boolean fDeleteOld)
+   at System.Runtime.InteropServices.Marshal.StructureToPtr[T](T structure, IntPtr ptr, Boolean fDeleteOld)
+   at DSRemapper.DualShock.USBStatus.ToArray()
+   at DSRemapper.ViGEm.DS4.Update()
+   at MoonSharp.Interpreter.Interop.MethodMemberDescriptor.Execute(Script script, Object obj, ScriptExecutionContext context, CallbackArguments args)
+   at MoonSharp.Interpreter.Interop.OverloadedMethodMemberDescriptor.PerformOverloadedCall(Script script, Object obj, ScriptExecutionContext context, CallbackArguments args)
+   at MoonSharp.Interpreter.Interop.OverloadedMethodMemberDescriptor.<>c__DisplayClass33_0.<GetCallback>b__0(ScriptExecutionContext context, CallbackArguments args)
+   at MoonSharp.Interpreter.Execution.VM.Processor.Internal_ExecCall(Int32 argsCount, Int32 instructionPtr, CallbackFunction handler, CallbackFunction continuation, Boolean thisCall, String debugText, DynValue unwindHandler)
+   at MoonSharp.Interpreter.Execution.VM.Processor.Processing_Loop(Int32 instructionPtr)
+   at MoonSharp.Interpreter.Execution.VM.Processor.Call(DynValue function, DynValue[] args)
+   at DSRemapper.LuaRemapper.LuaInterpreter.Remap(IDSRInputReport report, Double deltaTime)
+[2026-01-07 15:29:17.236] Information: [DSRemapper.Dualsense (0)] DualSense [14:3A:9A:B8:20:34]: Connected using USB
+[2026-01-07 15:29:17.237] Information: [DSRempper.RemapperCore (0)] Physical device unpluged: DualShock 4 [C0:13:37:AB:1B:A7]
+[2026-01-07 15:29:21.337] Information: [DSRemapper.Dualsense (0)] DualSense [14:3A:9A:B8:20:34]: Connected using USB
+[2026-01-07 15:29:21.337] Information: [DSRemapper.Dualshock (0)] DualShock 4 [40:1B:5F:D6:AB:0F]: Connected using USB
+[2026-01-07 15:29:21.337] Information: [DSRempper.RemapperCore (0)] Physical device plugged: DualShock 4 [40:1B:5F:D6:AB:0F]
+[2026-01-07 15:29:21.353] Information: [HidApi (0)] Windows OS detected, setting input buffer count
+[2026-01-07 15:29:21.354] Information: [DSRemapper.Dualshock (0)] DualShock 4 [40:1B:5F:D6:AB:0F]: buffer count set to 3
+[2026-01-07 15:29:22.822] Information: [DSRemapper.Dualsense (0)] DualSense [14:3A:9A:B8:20:34]: Connected using USB
+[2026-01-07 15:29:22.822] Information: [DSRemapper.Dualshock (0)] DualShock 4 [40:1B:5F:D6:AB:0F]: Connected using USB
+[2026-01-07 15:29:22.823] Information: [DSRempper.RemapperCore (0)] Physical device plugged: Controller (XBOX 360 For Windows) [14dac850-676e-11ee-8001-444553540000]
