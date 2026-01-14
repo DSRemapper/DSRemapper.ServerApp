@@ -9,6 +9,7 @@ using DSRemapper.Core.Loggers;
 using Microsoft.AspNetCore.SignalR;
 using DSRemapper.ServerApp.Controllers;
 using System.Collections.Concurrent;
+using Microsoft.AspNetCore.StaticFiles.Infrastructure;
 
 namespace DSRemapper.ServerApp
 {
@@ -61,7 +62,6 @@ namespace DSRemapper.ServerApp
             });
 
             logger.LogInformation("Configuring server endpoints");
-
             app.UseDefaultFiles();
             app.UseStaticFiles();
             /*app.UseStaticFiles(new StaticFileOptions
